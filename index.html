@@ -3,167 +3,196 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>دردِ دل کی دھڑکن  - حسن جتوئی | اردو پوائنٹ اسٹائل</title>
+    <title>شاعرِ مشرقِ سندھ - حسن جتوئی | آفیشل پورٹل</title>
     
-        <link href="https://fontlibrary.org/face/jameel-noori-nastaleeq" rel="stylesheet">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts for Urdu Support -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400;700&display=swap" rel="stylesheet">
     
+    <!-- Cascading Style for Premium Urdu Fonts -->
     <style>
+        /* Urdu Font Face Declarations */
+        @font-face {
+            font-family: 'Jameel Noori Nastaleeq';
+            src: url('https://cdn.jsdelivr.net/gh/m-bilal/jameel-noori-nastaleeq@master/Jameel%20Noori%20Nastaleeq.ttf') format('truetype');
+        }
+
         :root {
             --up-red: #c10000;
             --up-dark: #1a1a1a;
+            --up-gold: #d4af37;
             --up-gray: #f4f4f4;
-            --font-main: 'Noto Nastaliq Urdu', serif;
+            --font-main: 'Jameel Noori Nastaleeq', 'Noto Nastaliq Urdu', serif;
         }
 
         body {
             font-family: var(--font-main);
-            background-color: white;
+            background-color: #fff;
             color: #333;
             margin: 0;
             padding: 0;
-            line-height: 2.2;
+            line-height: 2.4;
         }
 
         /* Top Bar */
         .top-bar {
             background-color: var(--up-dark);
             color: white;
-            padding: 5px 0;
+            padding: 8px 0;
             font-size: 14px;
+            border-bottom: 2px solid var(--up-gold);
         }
 
         /* Header Logo */
         .main-header {
-            border-bottom: 4px solid var(--up-red);
-            padding: 20px 0;
-            background: #fff;
+            border-bottom: 5px solid var(--up-red);
+            padding: 40px 0;
+            background: linear-gradient(to bottom, #ffffff, #fdfdfd);
+            position: relative;
         }
 
         .logo-text {
             color: var(--up-red);
-            font-size: 4rem;
+            font-size: 5rem;
             font-weight: bold;
-            line-height: 1;
+            line-height: 1.2;
+            text-shadow: 2px 2px 5px rgba(0,0,0,0.1);
         }
 
-        .sub-logo {
+        .badge-mashriq {
+            display: inline-block;
+            background: var(--up-gold);
+            color: #000;
+            padding: 5px 20px;
             font-size: 1.2rem;
-            color: #666;
+            font-weight: bold;
+            border-radius: 50px;
             margin-top: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
         }
 
         /* Navigation */
         .nav-menu {
             background: var(--up-red);
             color: white;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
         }
 
         .nav-link {
-            padding: 10px 20px;
+            padding: 15px 30px;
             display: inline-block;
-            border-left: 1px solid rgba(255,255,255,0.1);
+            border-left: 1px solid rgba(255,255,255,0.2);
             font-weight: bold;
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
         }
 
-        /* Breaking News Bar */
-        .news-ticker {
-            background: #eee;
-            padding: 10px;
+        .nav-link:hover {
+            background: var(--up-dark);
+            color: var(--up-gold);
+        }
+
+        /* Featured Section */
+        .featured-intro {
+            background: linear-gradient(135deg, #f9f9f9 0%, #ffffff 100%);
+            border: 1px solid #eee;
+            border-radius: 15px;
+            padding: 40px;
+            margin-bottom: 40px;
             display: flex;
+            flex-direction: column;
             align-items: center;
-            overflow: hidden;
-            white-space: nowrap;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
         }
 
-        .ticker-label {
+        .profile-frame {
+            width: 220px;
+            height: 220px;
+            border-radius: 50%;
+            border: 8px solid #fff;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+            overflow: hidden;
+            margin-bottom: 25px;
             background: var(--up-red);
-            color: white;
-            padding: 0 15px;
-            font-weight: bold;
-            margin-left: 15px;
-            flex-shrink: 0;
+        }
+
+        .profile-frame img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
 
         /* Poetry Card Style */
         .poetry-card {
-            border: 1px solid #ddd;
-            margin-bottom: 30px;
+            border: 1px solid #eee;
+            margin-bottom: 40px;
             background: #fff;
-            transition: 0.3s;
+            border-radius: 12px;
+            overflow: hidden;
+            transition: all 0.4s ease;
         }
 
         .poetry-card:hover {
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-        }
-
-        .image-box {
-            position: relative;
-            height: 250px;
-            overflow: hidden;
-            background: #000;
-        }
-
-        .sliding-img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: opacity 1s ease-in-out;
-            position: absolute;
-            top: 0;
-            left: 0;
-            opacity: 0;
-        }
-
-        .sliding-img.active {
-            opacity: 0.7;
-        }
-
-        .poetry-content {
-            padding: 20px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.12);
         }
 
         .poetry-title-up {
             color: var(--up-red);
-            font-size: 1.8rem;
-            margin-bottom: 15px;
-            border-bottom: 2px solid var(--up-gray);
-            padding-bottom: 10px;
+            font-size: 2.4rem;
+            margin-bottom: 25px;
+            border-bottom: 3px double var(--up-gray);
+            padding-bottom: 15px;
+            font-weight: bold;
         }
 
-        /* Sidebar Widgets */
+        .poetry-body {
+            font-size: 1.8rem;
+            color: #1a1a1a;
+            text-align: center;
+            line-height: 3;
+            padding: 0 20px;
+        }
+
+        /* Widgets */
         .widget-title {
             background: var(--up-dark);
-            color: white;
-            padding: 10px;
+            color: var(--up-gold);
+            padding: 15px 20px;
             font-weight: bold;
-            margin-bottom: 15px;
-            border-right: 5px solid var(--up-red);
+            margin-bottom: 25px;
+            border-right: 8px solid var(--up-red);
+            font-size: 1.4rem;
+            border-radius: 4px;
         }
 
         /* Footer */
         .up-footer {
             background: var(--up-dark);
             color: #ccc;
-            padding: 50px 0;
-            margin-top: 50px;
+            padding: 80px 0 40px;
+            margin-top: 80px;
+            border-top: 5px solid var(--up-red);
         }
 
         @media (max-width: 768px) {
-            .logo-text { font-size: 2.5rem; }
-            .nav-menu { overflow-x: auto; white-space: nowrap; }
+            .logo-text { font-size: 3.5rem; }
+            .poetry-body { font-size: 1.4rem; }
+            .profile-frame { width: 180px; height: 180px; }
         }
     </style>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
     <!-- Top Bar -->
     <div class="top-bar">
         <div class="container mx-auto px-4 flex justify-between items-center">
-            <div id="urdu-date">لوڈنگ تاریخ...</div>
-            <div id="live-clock-up">00:00:00</div>
+            <div id="urdu-date" class="font-medium">لوڈنگ تاریخ...</div>
+            <div id="live-clock-up" dir="ltr" class="font-bold tracking-widest text-gold-500">00:00:00</div>
         </div>
     </div>
 
@@ -171,36 +200,47 @@
     <header class="main-header">
         <div class="container mx-auto px-4 text-center">
             <div class="logo-text">حسن جتوئی</div>
-            <div class="sub-logo font-bold">دردِ دل کی دھڑکن - آفیشل پورٹل</div>
+            <div class="badge-mashriq">شاعرِ مشرقِ سندھ</div>
+            <div class="sub-logo font-bold mt-2">دردِ دل کی دھڑکن - آفیشل پورٹل</div>
         </div>
     </header>
 
     <!-- Navigation -->
     <nav class="nav-menu">
-        <div class="container mx-auto px-4">
-            <a href="#" class="nav-link bg-black/10">ہوم</a>
+        <div class="container mx-auto px-4 overflow-x-auto whitespace-nowrap scrollbar-hide">
+            <a href="#" class="nav-link bg-black/30 text-gold-400">ہوم</a>
             <a href="#" class="nav-link">تازہ کلام</a>
             <a href="#" class="nav-link">نظمیں</a>
             <a href="#" class="nav-link">غزلیات</a>
             <a href="#" class="nav-link">ویڈیوز</a>
-            <a href="#" class="nav-link">رابطہ کریں</a>
+            <a href="#" class="nav-link">رابطہ</a>
         </div>
     </nav>
 
-    <!-- News Ticker -->
-    <div class="news-ticker container mx-auto mt-4 px-4">
-        <span class="ticker-label">بریکنگ نیوز</span>
-        <marquee behavior="scroll" direction="right" scrollamount="6">
-            خوش آمدید! حسن جتوئی کا تازہ مجموعہ کلام "دردِ دل کی دھڑکن" اب لائیو ہے... • ...تازہ ترین نظم: "روح کا بکھراؤ" شامل کر دی گئی ہے... • ...مزید اپڈیٹس کے لیے پورٹل وزٹ کرتے رہیں...
-        </marquee>
-    </div>
-
-    <!-- Main Content -->
-    <div class="container mx-auto px-4 mt-8 flex flex-col lg:flex-row gap-8">
+    <!-- Main Section -->
+    <div class="container mx-auto px-4 mt-12 flex flex-col lg:flex-row gap-12">
         
-        <!-- Left Column: Poetry Stream -->
+        <!-- Left Column: Primary Content -->
         <div class="lg:w-2/3">
-            <div class="widget-title mb-6">تازہ ترین شاعری</div>
+            
+            <!-- Welcome Profile Section (FRONT) -->
+            <div class="featured-intro">
+                <div class="profile-frame">
+                    <img src="https://i.ibb.co/XZpNgSJ4/IMG-20251026-WA0025-modified.png" alt="حسن جتوئی">
+                </div>
+                <h1 class="text-4xl font-bold text-gray-800 mb-4">خوش آمدید! آپ شاعرِ مشرقِ سندھ کے پورٹل پر ہیں</h1>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
+                    میھڑ، سندھ کی دھرتی سے اٹھنے والی وہ آواز جس نے دردِ دل کو لفظوں کا پیرہن عطا کیا۔ حسن جتوئی کا کلام انسانی جذبات کی سچی ترجمانی ہے۔
+                </p>
+                <div class="flex flex-wrap justify-center gap-4 mt-8">
+                    <a href="#poetry-feed" class="bg-red-700 text-white px-8 py-3 rounded-full font-bold shadow-lg hover:bg-red-800 transition">تازہ کلام دیکھیں</a>
+                    <a href="https://wa.me/923083500829" target="_blank" class="bg-green-600 text-white px-8 py-3 rounded-full font-bold shadow-lg hover:bg-green-700 transition flex items-center justify-center">
+                        <i class="fab fa-whatsapp ml-2"></i> واٹس ایپ رابطہ
+                    </a>
+                </div>
+            </div>
+
+            <div class="widget-title">منتخب کلام</div>
             <div id="poetry-feed">
                 <!-- Poetry cards injected here -->
             </div>
@@ -208,25 +248,61 @@
 
         <!-- Right Column: Sidebar -->
         <div class="lg:w-1/3">
-            <div class="widget-title">شاعر کے بارے میں</div>
-            <div class="bg-gray-50 p-6 border border-gray-200 mb-8">
-                <img src="https://i.ibb.co/XZpNgSJ4/IMG-20251026-WA0025-modified.png" class="w-full h-auto rounded shadow-lg mb-4" alt="شاعر کی تصویر">
-                <p class="text-justify">حسن جتوئی صاحب میھڑ، سندھ سے تعلق رکھنے والے ایک باصلاحیت شاعر ہیں۔ ان کی شاعری انسانی روح، درد اور تنہائی کے گرد گھومتی ہے۔</p>
-                <div class="flex gap-4 mt-4">
-                    <button class="bg-blue-600 text-white px-4 py-2 rounded flex-1"><i class="fab fa-facebook-f mr-2"></i> فالو کریں</button>
-                    <button class="bg-green-600 text-white px-4 py-2 rounded flex-1"><i class="fab fa-whatsapp mr-2"></i> واٹس ایپ</button>
+            <div class="widget-title">ہم سے جڑیے</div>
+            <div class="bg-gray-50 p-6 rounded-lg border border-gray-200 shadow-inner mb-8">
+                <div class="flex flex-col gap-4">
+                    <!-- Google Poetry Link -->
+                    <a href="https://share.google/taIEB437HWGcmcBBl" target="_blank" class="flex items-center gap-4 group p-2 hover:bg-white rounded-lg transition border-b pb-4">
+                        <div class="w-12 h-12 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center text-xl shadow-sm">
+                            <i class="fab fa-google"></i>
+                        </div>
+                        <div>
+                            <div class="font-bold group-hover:text-blue-700">Google Poetry</div>
+                            <div class="text-sm text-gray-500">کلامِ حسن جتوئی (گوگل)</div>
+                        </div>
+                    </a>
+                    
+                    <!-- UrduPoint Link -->
+                    <a href="https://www.urdupoint.com/poetry/user-poet/hassan-jatoi-27314.html" target="_blank" class="flex items-center gap-4 group p-2 hover:bg-white rounded-lg transition border-b pb-4">
+                        <div class="w-12 h-12 bg-red-100 text-red-600 rounded-full flex items-center justify-center text-xl shadow-sm">
+                            <i class="fas fa-pen-nib"></i>
+                        </div>
+                        <div>
+                            <div class="font-bold group-hover:text-red-700">اردو پوائنٹ پروفائل</div>
+                            <div class="text-sm text-gray-500">اردو پوائنٹ پر کلام پڑھیں</div>
+                        </div>
+                    </a>
+
+                    <!-- WhatsApp Link -->
+                    <a href="https://wa.me/923083500829" target="_blank" class="flex items-center gap-4 group p-2 hover:bg-white rounded-lg transition">
+                        <div class="w-12 h-12 bg-green-100 text-green-600 rounded-full flex items-center justify-center text-xl shadow-sm">
+                            <i class="fab fa-whatsapp"></i>
+                        </div>
+                        <div>
+                            <div class="font-bold group-hover:text-green-700">واٹس ایپ</div>
+                            <div class="text-sm text-gray-500">+92 308 3500829</div>
+                        </div>
+                    </a>
                 </div>
             </div>
 
-            <div class="widget-title">مقبول نظم کے عنوانات</div>
-            <div class="flex flex-wrap gap-2 mb-8" id="tag-cloud">
-                <!-- Tags will be injected here -->
+            <div class="widget-title">تازہ ترین خبریں</div>
+            <div class="bg-white p-5 border border-red-100 rounded-lg mb-8 shadow-sm">
+                <ul class="space-y-4">
+                    <li class="border-b pb-3 flex gap-3">
+                        <span class="text-red-600 font-bold">•</span>
+                        <span>نئی نظم "روح کا بکھراؤ" اب دستیاب ہے۔</span>
+                    </li>
+                    <li class="border-b pb-3 flex gap-3">
+                        <span class="text-red-600 font-bold">•</span>
+                        <span>شاعری کی نئی کتاب جلد منظرِ عام پر آئے گی۔</span>
+                    </li>
+                </ul>
             </div>
 
-            <div class="widget-title">سیٹنگز</div>
-            <div class="bg-gray-100 p-4 rounded mb-8">
-                <label class="block text-sm mb-2 font-bold">لائنوں کا فاصلہ:</label>
-                <input type="range" min="2" max="4" step="0.1" value="2.2" class="w-full accent-red-600" oninput="document.body.style.lineHeight = this.value">
+            <div class="widget-title">مقبول عنوانات</div>
+            <div class="flex flex-wrap gap-3 mb-8" id="tag-cloud">
+                <!-- Tags here -->
             </div>
         </div>
 
@@ -235,52 +311,36 @@
     <!-- Footer -->
     <footer class="up-footer">
         <div class="container mx-auto px-4 text-center">
-            <div class="logo-text text-white opacity-20 text-5xl mb-6">حسن جتوئی</div>
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-sm mb-12">
+            <div class="logo-text text-white opacity-5 text-7xl mb-10">شاعرِ مشرقِ سندھ</div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 text-lg mb-12 border-b border-gray-800 pb-12">
                 <div>
-                    <h5 class="font-bold text-red-500 mb-4">ہمارے بارے میں</h5>
-                    <p>یہ پورٹل حسن جتوئی کے کلام کی ترویج کے لیے وقف ہے۔</p>
+                    <h5 class="font-bold text-red-500 mb-6 text-2xl">حسن جتوئی</h5>
+                    <p class="text-gray-400">ان کی شاعری دلوں کو چھوتی ہے اور انسانیت کا درس دیتی ہے۔</p>
                 </div>
                 <div>
-                    <h5 class="font-bold text-red-500 mb-4">لنکس</h5>
-                    <ul><li>تازہ خبریں</li><li>کلامِ نو</li><li>غزلیات</li></ul>
+                    <h5 class="font-bold text-red-500 mb-6 text-2xl">پتہ</h5>
+                    <p class="text-gray-400 text-xl">تحصیل میھڑ، ضلع دادو، سندھ، پاکستان</p>
                 </div>
                 <div>
-                    <h5 class="font-bold text-red-500 mb-4">رابطہ</h5>
-                    <p>میھڑ، سندھ، پاکستان</p>
-                    <p>jatoihassan009@gmail.com</p>
-                </div>
-                <div>
-                    <h5 class="font-bold text-red-500 mb-4">سوشل میڈیا</h5>
-                    <div class="flex justify-center gap-4 text-xl">
-                        <i class="fab fa-facebook"></i><i class="fab fa-twitter"></i><i class="fab fa-instagram"></i>
-                    </div>
+                    <h5 class="font-bold text-red-500 mb-6 text-2xl">رابطہ</h5>
+                    <p class="text-gray-400">jatoihassan009@gmail.com</p>
+                    <p class="text-gray-400 mt-1" dir="ltr">+92 308 3500829</p>
                 </div>
             </div>
-            <div class="border-t border-gray-700 pt-8">
-                &copy; 2025 اردو پوائنٹ اسٹائل پورٹل - جملہ حقوق بحق حسن جتوئی محفوظ ہیں۔
-            </div>
+            <p class="text-gray-600">&copy; 2025 حسن جتوئی آفیشل پورٹل - تمام جملہ حقوق بحقِ شاعر محفوظ ہیں۔</p>
         </div>
     </footer>
 
     <script>
-        const imageLibrary = {
-            birds: ["https://images.unsplash.com/photo-1444464666168-49d633b867ad?q=80&w=600", "https://images.unsplash.com/photo-1452570053594-1b985d6ea890?q=80&w=600"],
-            flowers: ["https://images.unsplash.com/photo-1490750967868-88aa4486c946?q=80&w=600", "https://images.unsplash.com/photo-1464852045489-bccb7d17fe39?q=80&w=600"],
-            sad: ["https://images.unsplash.com/photo-1499200632172-c51638d5824e?q=80&w=600", "https://images.unsplash.com/photo-1474540412665-1cdae210ae6b?q=80&w=600"]
-        };
-
         const poetryData = [
             { title: "روح کی تنہائی", text: "روح جب اکیلی ہو جائے تو ہجوم بھی سنسان لگتا ہے<br>خاموشی باتیں کرنے لگتی ہے<br>اور انسان خود سے ڈرنے لگتا ہے", cat: 'sad' },
             { title: "دل کی آواز", text: "دل کی آواز چیختی نہیں<br>بس آہستہ آہستہ اندر بکھرتی رہتی ہے<br>کوئی سنے تو آنکھیں بھی بول اٹھتی ہیں", cat: 'birds' },
             { title: "خاموش روح", text: "خاموش روح سب کچھ سہہ لیتی ہے<br>شکایت نہیں کرتی<br>بس راتوں میں تھک کر خدا کو یاد کرتی ہے", cat: 'sad' },
-            { title: "روح کا سفر", text: "روح کا سفر قدموں سے نہیں ہوتا<br>یہ درد سے گزرتا ہے<br>اور شعور تک پہنچ کر ٹھہر جاتا ہے", cat: 'flowers' },
-            { title: "خاموش دعا", text: "کچھ دعائیں ہونٹوں تک نہیں آتیں<br>وہ سیدھا دل سے اٹھتی ہیں<br>اور رب تک پہنچ جاتی ہیں", cat: 'birds' },
-            { title: "روح کا بکھراؤ", text: "روح جب بکھرتی ہے<br>تو انسان جُڑ کر بھی<br>ادھورا رہ جاتا ہے", cat: 'sad' }
+            { title: "روح کا سفر", text: "روح کا سفر قدموں سے نہیں ہوتا<br>یہ درد سے گزرتا ہے<br>اور شعور تک پہنچ کر ٹھہر جاتا ہے", cat: 'flowers' }
         ];
 
         function initApp() {
-            // Clock
+            // Date & Clock
             setInterval(() => {
                 const now = new Date();
                 document.getElementById('live-clock-up').innerText = now.toLocaleTimeString('en-GB');
@@ -292,40 +352,26 @@
             const cloud = document.getElementById('tag-cloud');
             
             poetryData.forEach((p, i) => {
-                // Card
                 const card = document.createElement('div');
-                card.className = "poetry-card";
+                card.className = "poetry-card p-8";
                 card.innerHTML = `
-                    <div class="image-box" id="box-${i}">
-                        <img src="${imageLibrary[p.cat][0]}" class="sliding-img active" id="img-${i}-1">
-                        <img src="${imageLibrary[p.cat][1]}" class="sliding-img" id="img-${i}-2">
-                    </div>
                     <div class="poetry-content">
-                        <h2 class="poetry-title-up">${p.title}</h2>
-                        <div class="poetry-body text-xl">${p.text}</div>
-                        <div class="mt-6 pt-4 border-t flex justify-between items-center text-sm text-gray-500">
-                            <span>اشاعت: 2025</span>
-                            <div class="flex gap-3">
-                                <i class="fab fa-whatsapp text-green-500 cursor-pointer"></i>
-                                <i class="fab fa-facebook text-blue-600 cursor-pointer"></i>
-                                <i class="fas fa-bookmark text-gray-400 cursor-pointer"></i>
+                        <h2 class="poetry-title-up text-center">${p.title}</h2>
+                        <div class="poetry-body">${p.text}</div>
+                        <div class="mt-10 pt-6 border-t flex justify-between items-center text-sm text-gray-400">
+                            <span class="flex items-center font-bold text-red-700">شاعر: حسن جتوئی</span>
+                            <div class="flex gap-6 text-2xl">
+                                <a href="https://wa.me/923083500829?text=کلام پسند آیا: ${p.title}" target="_blank"><i class="fab fa-whatsapp text-green-500 cursor-pointer"></i></a>
+                                <i class="fab fa-facebook text-blue-700 cursor-pointer"></i>
+                                <i class="fas fa-share-alt text-gray-300 cursor-pointer"></i>
                             </div>
                         </div>
                     </div>
                 `;
                 feed.appendChild(card);
 
-                // Image Animation logic
-                let current = 1;
-                setInterval(() => {
-                    document.getElementById(`img-${i}-${current}`).classList.remove('active');
-                    current = current === 1 ? 2 : 1;
-                    document.getElementById(`img-${i}-${current}`).classList.add('active');
-                }, 3000);
-
-                // Tags
                 const tag = document.createElement('span');
-                tag.className = "bg-gray-200 px-3 py-1 rounded text-xs hover:bg-red-500 hover:text-white cursor-pointer transition";
+                tag.className = "bg-white border border-gray-200 text-gray-700 px-5 py-2 rounded-full text-md hover:bg-red-700 hover:text-white cursor-pointer transition shadow-sm";
                 tag.innerText = p.title;
                 cloud.appendChild(tag);
             });
