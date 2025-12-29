@@ -3,550 +3,335 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>دردِ دل کی دھڑکن - حسن جتوئی (آفیشل پورٹل)</title>
+    <title>حسن جتوئی - دردِ دل کی دھڑکن | اردو پوائنٹ اسٹائل</title>
     
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400;700&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <style>
         :root {
-            --primary: #c026d3; 
-            --secondary: #312e81;
-            --bg: #fdfcfe;
+            --up-red: #c10000;
+            --up-dark: #1a1a1a;
+            --up-gray: #f4f4f4;
+            --font-main: 'Noto Nastaliq Urdu', serif;
         }
 
         body {
-            font-family: 'Noto Nastaliq Urdu', serif;
-            background-color: var(--bg);
-            color: #1e293b;
-            line-height: 2.4;
-            font-style: normal !important;
-            scroll-behavior: smooth;
-            cursor: none;
+            font-family: var(--font-main);
+            background-color: white;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            line-height: 2.2;
         }
 
-        /* Custom Cursor */
-        .cursor-dot {
-            width: 8px;
-            height: 8px;
-            background: var(--primary);
-            position: fixed;
-            border-radius: 50%;
-            z-index: 9999;
-            pointer-events: none;
-            transition: transform 0.1s;
-        }
-        .cursor-outline {
-            width: 30px;
-            height: 30px;
-            border: 2px solid var(--primary);
-            position: fixed;
-            border-radius: 50%;
-            z-index: 9998;
-            pointer-events: none;
-            transition: all 0.15s ease-out;
-            opacity: 0.5;
+        /* Top Bar */
+        .top-bar {
+            background-color: var(--up-dark);
+            color: white;
+            padding: 5px 0;
+            font-size: 14px;
         }
 
-        .urdu-font { 
-            font-family: 'Noto Nastaliq Urdu', serif; 
-            font-style: normal !important;
+        /* Header Logo */
+        .main-header {
+            border-bottom: 4px solid var(--up-red);
+            padding: 20px 0;
+            background: #fff;
         }
 
-        /* Glassmorphism Card */
-        .glass-card {
-            background: rgba(255, 255, 255, 0.75);
-            backdrop-filter: blur(12px);
-            border: 1px solid rgba(255, 255, 255, 0.5);
-            border-radius: 2rem;
-            transition: all 0.4s ease;
-        }
-        .glass-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.05);
-            background: rgba(255, 255, 255, 0.98);
+        .logo-text {
+            color: var(--up-red);
+            font-size: 4rem;
+            font-weight: bold;
+            line-height: 1;
         }
 
-        /* Reveal Animation */
-        .reveal {
-            opacity: 0;
-            transform: translateY(20px);
-            transition: all 0.6s ease-out;
-        }
-        .reveal.active {
-            opacity: 1;
-            transform: translateY(0);
+        .sub-logo {
+            font-size: 1.2rem;
+            color: #666;
+            margin-top: 10px;
         }
 
-        /* Ticker Animation */
-        .ticker-container {
-            background: #ffffff;
-            border-bottom: 1px solid #e2e8f0;
+        /* Navigation */
+        .nav-menu {
+            background: var(--up-red);
+            color: white;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .nav-link {
+            padding: 10px 20px;
+            display: inline-block;
+            border-left: 1px solid rgba(255,255,255,0.1);
+            font-weight: bold;
+        }
+
+        /* Breaking News Bar */
+        .news-ticker {
+            background: #eee;
+            padding: 10px;
+            display: flex;
+            align-items: center;
             overflow: hidden;
             white-space: nowrap;
         }
-        .ticker-text {
-            display: inline-block;
-            animation: ticker 40s linear infinite;
-            padding-left: 100%;
-        }
-        @keyframes ticker {
-            0% { transform: translateX(0); }
-            100% { transform: translateX(100%); }
+
+        .ticker-label {
+            background: var(--up-red);
+            color: white;
+            padding: 0 15px;
+            font-weight: bold;
+            margin-left: 15px;
+            flex-shrink: 0;
         }
 
-        /* Nav Link Animation */
-        .nav-link {
+        /* Poetry Card Style */
+        .poetry-card {
+            border: 1px solid #ddd;
+            margin-bottom: 30px;
+            background: #fff;
+            transition: 0.3s;
+        }
+
+        .poetry-card:hover {
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .image-box {
             position: relative;
-            padding-bottom: 5px;
+            height: 250px;
+            overflow: hidden;
+            background: #000;
         }
-        .nav-link::after {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 2px;
-            bottom: 0;
-            right: 0;
-            background: var(--primary);
-            transition: width 0.3s;
-        }
-        .nav-link:hover::after {
+
+        .sliding-img {
             width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: opacity 1s ease-in-out;
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
         }
 
-        /* Floating Audio Control */
-        .audio-player {
-            position: fixed;
-            bottom: 25px;
-            left: 25px;
-            z-index: 1000;
-            background: white;
-            padding: 10px 20px;
-            border-radius: 50px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            border: 1px solid #f1f5f9;
+        .sliding-img.active {
+            opacity: 0.7;
         }
 
+        .poetry-content {
+            padding: 20px;
         }
 
-        .loading-spinner {
-            border: 3px solid rgba(255,255,255,0.1);
-            border-top: 3px solid #fbbf24;
-            border-radius: 50%;
-            width: 20px;
-            height: 20px;
-            animation: spin 1s linear infinite;
+        .poetry-title-up {
+            color: var(--up-red);
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            border-bottom: 2px solid var(--up-gray);
+            padding-bottom: 10px;
         }
-        @keyframes spin { 100% { transform: rotate(360deg); } }
 
-        * { font-style: normal !important; }
+        /* Sidebar Widgets */
+        .widget-title {
+            background: var(--up-dark);
+            color: white;
+            padding: 10px;
+            font-weight: bold;
+            margin-bottom: 15px;
+            border-right: 5px solid var(--up-red);
+        }
+
+        /* Footer */
+        .up-footer {
+            background: var(--up-dark);
+            color: #ccc;
+            padding: 50px 0;
+            margin-top: 50px;
+        }
+
+        @media (max-width: 768px) {
+            .logo-text { font-size: 2.5rem; }
+            .nav-menu { overflow-x: auto; white-space: nowrap; }
+        }
     </style>
 </head>
 <body>
 
-    <!-- Custom Cursor -->
-    <div class="cursor-dot"></div>
-    <div class="cursor-outline"></div>
-
-    <!-- Music Player -->
-    <div class="audio-player glass-card">
-        <button onclick="toggleMusic()" class="text-fuchsia-600 hover:scale-110 transition-transform">
-            <svg id="playIcon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 16 16">
-                <path d="M11.596 8.697l-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z"/>
-            </svg>
-        </button>
-        <div class="text-[10px] font-bold text-slate-500 uppercase tracking-widest">Mood Music</div>
-        <audio id="bgMusic" loop>
-            <source src="https://www.bensound.com/bensound-music/bensound-memories.mp3" type="audio/mpeg">
-        </audio>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container mx-auto px-4 flex justify-between items-center">
+            <div id="urdu-date">لوڈنگ تاریخ...</div>
+            <div id="live-clock-up">00:00:00</div>
+        </div>
     </div>
 
-    <!-- Header & Nav -->
-    <header class="bg-white/90 backdrop-blur-md sticky top-0 z-40 border-b border-slate-100">
-        <div class="container mx-auto px-6 py-4 flex flex-col md:flex-row justify-between items-center gap-4">
-            <div class="text-right">
-                <h1 class="text-3xl font-bold text-indigo-950">دردِ دل کی دھڑکن</h1>
-                <p class="text-fuchsia-600 text-sm font-bold">حسن جتوئی آفیشل</p>
-            </div>
-            
-            <nav class="flex gap-6 text-base font-bold text-slate-600">
-                <a href="#" class="nav-link text-indigo-900">ابتدا</a>
-                <a href="#prose-section" class="nav-link">نثری پارے</a>
-                <a href="#ai-writing" class="nav-link">تخیلِ حسن</a>
-                <a href="#contact" class="nav-link">رابطہ</a>
-            </nav>
+    <!-- Header -->
+    <header class="main-header">
+        <div class="container mx-auto px-4 text-center">
+            <div class="logo-text">حسن جتوئی</div>
+            <div class="sub-logo font-bold">دردِ دل کی دھڑکن - آفیشل پورٹل</div>
         </div>
     </header>
 
-    <!-- Ticker -->
-    <div class="ticker-container py-3 shadow-sm flex items-center">
-        <span class="bg-fuchsia-600 text-white px-4 py-1 z-10 font-bold ml-2 text-xs rounded-l-full">نیوز اپ ڈیٹ</span>
-        <div class="ticker-text urdu-font text-slate-700">
-            خوش آمدید! حسن جتوئی کے آفیشل پورٹل پر آپ کو بہترین نثری مجموعہ ملے گا... نئی تحریر "اداسی کی بازگشت" اب دستیاب ہے...
+    <!-- Navigation -->
+    <nav class="nav-menu">
+        <div class="container mx-auto px-4">
+            <a href="#" class="nav-link bg-black/10">ہوم</a>
+            <a href="#" class="nav-link">تازہ کلام</a>
+            <a href="#" class="nav-link">نظمیں</a>
+            <a href="#" class="nav-link">غزلیات</a>
+            <a href="#" class="nav-link">ویڈیوز</a>
+            <a href="#" class="nav-link">رابطہ کریں</a>
         </div>
+    </nav>
+
+    <!-- News Ticker -->
+    <div class="news-ticker container mx-auto mt-4 px-4">
+        <span class="ticker-label">بریکنگ نیوز</span>
+        <marquee behavior="scroll" direction="right" scrollamount="6">
+            خوش آمدید! حسن جتوئی کا تازہ مجموعہ کلام "دردِ دل کی دھڑکن" اب لائیو ہے... • ...تازہ ترین نظم: "روح کا بکھراؤ" شامل کر دی گئی ہے... • ...مزید اپڈیٹس کے لیے پورٹل وزٹ کرتے رہیں...
+        </marquee>
     </div>
 
-    <main class="container mx-auto px-6 py-12">
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
-            
-            <!-- Content -->
-            <div class="lg:col-span-8">
-                <!-- Hero -->
-                <div class="glass-card p-8 md:p-12 mb-10 flex flex-col md:flex-row items-center gap-10">
-                    <div class="w-48 h-64 flex-shrink-0 shadow-2xl rounded-3xl overflow-hidden border-4 border-white">
-                        <img src="https://i.ibb.co/XZpNgSJ4/IMG-20251026-WA0025-modified.png" alt="حسن جتوئی" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700">
-                    </div>
-                    <div class="text-right">
-                        <h2 class="text-4xl font-bold text-slate-900 mb-4">السلام علیکم، میں ہوں حسن جتوئی</h2>
-                        <p class="text-xl text-slate-600 leading-relaxed">
-                            میرا سفر لفظوں اور جذبوں کا سفر ہے۔ یہاں آپ کو میری وہ تحریریں ملیں گی جو شاید آپ کے دل کی آواز بن جائیں۔
-                        </p>
-                        <div class="mt-8 flex gap-3">
-                            <button onclick="googleSearch()" class="px-6 py-2 bg-indigo-950 text-white rounded-xl font-bold hover:bg-fuchsia-700 transition-colors">گوگل سرچ</button>
-                            <a href="#contact" class="px-6 py-2 border-2 border-indigo-950 text-indigo-950 rounded-xl font-bold hover:bg-indigo-50 transition-colors">رابطہ کریں</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Prose section -->
-                <section id="prose-section" class="space-y-8 mb-12">
-                    <h3 class="text-2xl font-bold text-indigo-950 border-r-4 border-fuchsia-500 pr-3">منتخب تحریریں</h3>
-                    
-                    <div class="glass-card p-8 reveal">
-                        <h4 class="text-2xl font-bold text-slate-800 mb-4">خالی ہاتھ</h4>
-                        <p class="text-xl leading-relaxed text-slate-700 urdu-font">
-                            "زندگی میں کبھی کبھی ہم سب کچھ پا کر بھی خالی ہاتھ رہ جاتے ہیں۔ یہ وہ لمحہ ہوتا ہے جب ہمیں احساس ہوتا ہے کہ اصل دولت سکونِ قلب ہے، جو لفظوں کے شور میں کہیں کھو گئی ہے۔"
-                        </p>
-                    </div>
-
-                    <div class="glass-card p-8 reveal">
-                        <h4 class="text-2xl font-bold text-slate-800 mb-4">خاموشی کی زبان</h4>
-                        <p class="text-xl leading-relaxed text-slate-700 urdu-font">
-                            "جو باتیں زبان نہیں کہہ پاتی، وہ آنکھیں کہہ دیتی ہیں۔ اور جو آنکھیں بھی نہ کہہ سکیں، وہ اداسی بن کر چہرے پر ٹھہر جاتی ہیں۔ میں اسی اداسی کا مصنف ہوں۔"
-                        </p>
-                   </div>
-               <!-- 1. روح کی تنہائی -->
-<div class="glass-card p-8 reveal">
-    <h4 class="text-2xl font-bold text-slate-800 mb-4">روح کی تنہائی</h4>
-    <p class="text-xl leading-relaxed text-slate-700 urdu-font">
-        روح کی تنہائی ایک خاموش سرگوشی ہے جو دل کے کمرے میں گونجتی ہے  
-        ہر لمحہ ایک صدا ہے، مگر جواب کہیں نہیں  
-        یادیں آتی ہیں، پھر جاتی ہیں، جیسے خزاں کی پرچھائیاں  
-        آنکھوں کے سامنے بکھرے لمحے، دل کے اندر ایک خالی جگہ چھوڑ جاتے ہیں  
-        کبھی کبھی یہ تنہائی روشنی کی طرح اندرونی کمرے میں جھلکتی ہے  
-        دل کی دھڑکن سست ہو جاتی ہے، اور صرف خاموشی رہ جاتی ہے  
-        یہ وہ لمحے ہیں جب انسان خود سے بات کرتا ہے  
-        اور روح اپنے اندر کے رازوں سے متعارف ہوتی ہے  
-        یہ تنہائی درد نہیں، بلکہ ایک خاموش سکون ہے  
-        جو دل کے بوجھ کو اپنے سینے میں سمیٹ لیتی ہے  
-    </p>
-</div>
-
-<!-- 2. دل کی آواز -->
-<div class="glass-card p-8 reveal">
-    <h4 class="text-2xl font-bold text-slate-800 mb-4">دل کی آواز</h4>
-    <p class="text-xl leading-relaxed text-slate-700 urdu-font">
-        دل کی آواز وہ سرگوشی ہے جو لفظوں میں نہیں آتی  
-        یہ ایک نرم ہلچل ہے جو اندر کی دنیا کو جگاتی ہے  
-        ہر دھڑکن ایک کہانی سناتی ہے، ہر سانس ایک جذبہ  
-        کبھی یہ خوشی کی لہر ہے، کبھی اداسی کا سناٹا  
-        یہ آواز ہمیں اپنے وجود سے جوڑتی ہے  
-        اور یاد دلاتی ہے کہ ہم زندہ ہیں  
-        دل کی آواز کبھی بے آواز بھی ہوتی ہے، لیکن ہمیشہ محسوس کی جاتی ہے  
-        یہ وہ صدا ہے جو روح کی گہرائیوں میں اتر جاتی ہے  
-        اور انسان کو اپنے آپ سے روشناس کرواتی ہے  
-        یہ آواز کبھی ٹوٹتی ہے، کبھی گم ہو جاتی ہے  
-        مگر ہر بار واپس آتی ہے، نئے رنگ اور نئے احساسات کے ساتھ  
-    </p>
-</div>
-
-<!-- 3. خاموش روح -->
-<div class="glass-card p-8 reveal">
-    <h4 class="text-2xl font-bold text-slate-800 mb-4">خاموش روح</h4>
-    <p class="text-xl leading-relaxed text-slate-700 urdu-font">
-        خاموش روح اپنے اندر بہت کچھ رکھتی ہے  
-        یہ وہ زبان ہے جو کبھی بولتی نہیں، مگر سب سمجھ جاتی ہے  
-        ہر اداس لمحہ، ہر چھپی ہوئی امید  
-        یہ سب اس کے اندر چھپے خزانے ہیں  
-        خاموش روح کبھی کبھی روشنی کے پل سے نکلتی ہے  
-        اور دل کے کمرے میں نرمی سے بیٹھ جاتی ہے  
-        اس کی موجودگی محسوس ہوتی ہے، مگر دکھائی نہیں دیتی  
-        یہ وہ روشنی ہے جو آنکھوں کے بغیر بھی دل میں جلتی ہے  
-        خاموشی میں یہ روح سب کچھ کہہ دیتی ہے  
-        اور انسان کو اپنے اندر کی دنیا سے ملواتی ہے  
-    </p>
-</div>
-
-<!-- 4. روح کا سفر -->
-<div class="glass-card p-8 reveal">
-    <h4 class="text-2xl font-bold text-slate-800 mb-4">روح کا سفر</h4>
-    <p class="text-xl leading-relaxed text-slate-700 urdu-font">
-        روح کا سفر ایک نہ ختم ہونے والا قصہ ہے  
-        ہر لمحہ ایک نیا راستہ، ہر سانس ایک نیا احساس  
-        یہ سفر دکھ، خوشی، محبت اور تنہائی سے بھرا ہے  
-        کبھی روشنی کے کنارے پر رکتا ہے، کبھی اندھیروں میں کھو جاتا ہے  
-        یہ سفر انسان کو خود سے ملاتا ہے  
-        اور اس کی خاموشیوں میں چھپی کہانیاں سناتا ہے  
-        ہر قدم ایک سبق ہے، ہر راہ ایک امتحان  
-        روح کا سفر کبھی آسان نہیں، مگر ہمیشہ سیکھنے والا ہوتا ہے  
-        یہ سفر زندگی کا حقیقی آئینہ ہے  
-    </p>
-</div>
-
-<!-- 5. اندرونی روشنی -->
-<div class="glass-card p-8 reveal">
-    <h4 class="text-2xl font-bold text-slate-800 mb-4">اندرونی روشنی</h4>
-    <p class="text-xl leading-relaxed text-slate-700 urdu-font">
-        اندرونی روشنی ایک چھپی ہوئی دنیا کی کرن ہے  
-        یہ وہ شعاع ہے جو دل کے اندھیروں کو روشن کرتی ہے  
-        کبھی دھیرے دھیرے آتی ہے، کبھی تیز روشنی کی طرح  
-        یہ روشنی سکون، امید اور محبت کا پیغام لاتی ہے  
-        دل کی بھٹکتی ہواوں میں یہ روشنی رہنمائی کرتی ہے  
-        اور انسان کو اپنے اندر کے سچ سے روشناس کرواتی ہے  
-        ہر وقت یہ روشنی موجود ہے، بس آنکھیں اسے دیکھنے کو تیار ہونی چاہئیں  
-        یہ روشنی کبھی ختم نہیں ہوتی، بس محسوس کرنے کی ضرورت ہے  
-    </p>
-</div>
-
-<!-- 6. دل اور روح کا رقص -->
-<div class="glass-card p-8 reveal">
-    <h4 class="text-2xl font-bold text-slate-800 mb-4">دل اور روح کا رقص</h4>
-    <p class="text-xl leading-relaxed text-slate-700 urdu-font">
-        دل اور روح کا رقص ایک خاموش موسیقی ہے  
-        ہر دھڑکن، ہر سانس، ایک قدم کی مانند  
-        کبھی یہ رقص اداسی میں، کبھی خوشی میں ہوتا ہے  
-        یہ رقص ہمیں خود سے جوڑتا ہے  
-        اور احساس دلاتا ہے کہ ہم زندہ ہیں  
-        دل کی خواہشیں اور روح کی امنگیں ایک ساتھ حرکت کرتی ہیں  
-        یہ رقص کبھی ختم نہیں ہوتا، بس لمحے بدلتے ہیں  
-        اور ہر لمحہ نئی کہانی سناتا ہے  
-    </p>
-</div>
-
-<!-- 7. احساس کی گہرائیاں -->
-<div class="glass-card p-8 reveal">
-    <h4 class="text-2xl font-bold text-slate-800 mb-4">احساس کی گہرائیاں</h4>
-    <p class="text-xl leading-relaxed text-slate-700 urdu-font">
-        احساس کی گہرائیاں وہ سمندر ہیں جہاں دل اور روح غرق ہو جاتے ہیں  
-        ہر لہر ایک یاد، ہر جھونکا ایک درد  
-        یہ گہرائیاں کبھی سکون دیتی ہیں، کبھی اضطراب  
-        یہ ہمیں خود سے ملواتی ہیں، اپنے اندر کی دنیا دکھاتی ہیں  
-        احساس کی یہ گہرائیاں انسان کو محسوس کرنے کا درس دیتی ہیں  
-        اور ہر لمحہ ایک نیا رنگ لے کر آتی ہیں  
-    </p>
-</div>
-
-<!-- 8. روح کا بوجھ -->
-<div class="glass-card p-8 reveal">
-    <h4 class="text-2xl font-bold text-slate-800 mb-4">روح کا بوجھ</h4>
-    <p class="text-xl leading-relaxed text-slate-700 urdu-font">
-        روح کا بوجھ اکثر نظر نہیں آتا، مگر محسوس ہوتا ہے  
-        یہ وہ بوجھ ہے جو یادوں، محبتوں اور دکھوں سے بنتا ہے  
-        کبھی یہ بوجھ دل کو دبا دیتا ہے، کبھی آنکھوں میں نمی لے آتا ہے  
-        روح کے بوجھ کو سمجھنا مشکل ہے، مگر یہ ہر لمحہ ہمارے ساتھ رہتا ہے  
-        یہ بوجھ انسان کو سیکھنے اور بڑھنے کا موقع دیتا ہے  
-        اور آخرکار سکون کی تلاش میں ہمیں اپنے اندر لے جاتا ہے  
-    </p>
-</div>
-
-<!-- 9. یادوں کی پرچھائیاں -->
-<div class="glass-card p-8 reveal">
-    <h4 class="text-2xl font-bold text-slate-800 mb-4">یادوں کی پرچھائیاں</h4>
-    <p class="text-xl leading-relaxed text-slate-700 urdu-font">
-        یادوں کی پرچھائیاں ہر دل کے کونے میں چھپی رہتی ہیں  
-        کبھی خوشبو کی طرح آتی ہیں، کبھی سناٹے کی طرح  
-        یہ پرچھائیاں ہمیں ماضی کی سیر کراتی ہیں  
-        کبھی ہنسی کے لمحے لے کر آتی ہیں، کبھی اداسی  
-        یہ ہمیں یاد دلاتی ہیں کہ زندگی کے ہر لمحے کی قدر کرنی چاہیے  
-        اور ہر یاد ہمارے وجود کا حصہ ہے  
-        یادوں کی پرچھائیاں کبھی دکھ دیتی ہیں، کبھی سکون  
-    </p>
-</div>
-
-<!-- 10. سکون کی تلاش -->
-<div class="glass-card p-8 reveal">
-    <h4 class="text-2xl font-bold text-slate-800 mb-4">سکون کی تلاش</h4>
-    <p class="text-xl leading-relaxed text-slate-700 urdu-font">
-        سکون کی تلاش ایک مسلسل سفر ہے  
-        یہ وہ روشنی ہے جسے دل اور روح دونوں چاہتے ہیں  
-        کبھی یہ باہر ملتا ہے، کبھی اندرونی خاموشی میں  
-        سکون ہمیں اپنے آپ سے جوڑتا ہے اور درد کو نرم کرتا ہے  
-        یہ ایک چھپی ہوئی خوشبو کی مانند ہے جو ہر لمحہ محسوس ہوتی ہے  
-        ہر انسان اپنی زندگی میں سکون کی تلاش میں ہے  
-        اور یہ تلاش کبھی ختم نہیں ہوتی، بس لمحے بدلتے رہتے ہیں  
-    </p>
-</div>
-                </section>
-
-                <!-- AI Feature -->
-                <section id="ai-writing" class="ai-box p-10 reveal">
-                    <div class="relative z-10">
-                        <h3 class="text-3xl font-bold mb-6 flex items-center gap-3">
-                            <span class="text-amber-400">✨</span> تخیلِ حسن (AI)
-                        </h3>
-                        <p class="text-indigo-100 mb-8">کوئی بھی خیال لکھیں، میں اسے اپنے ادبی انداز میں ڈھال دوں گا۔</p>
-                        
-                        <div class="flex flex-col gap-4">
-                            <textarea id="userInput" rows="2" class="w-full bg-white/10 border border-white/20 rounded-2xl px-6 py-4 text-white outline-none focus:border-amber-400 urdu-font text-lg" placeholder="مثال: تنہائی، بچھڑنا، یا اداسی..."></textarea>
-                            <button onclick="askAI()" id="aiBtn" class="w-full bg-amber-500 hover:bg-amber-400 text-indigo-950 py-4 rounded-2xl font-bold text-lg transition-all flex items-center justify-center gap-2">
-                                <span id="btnText">تخلیق کریں</span>
-                                <div id="loader" class="loading-spinner hidden"></div>
-                            </button>
-                        </div>
-                        
-                        <div id="ai-response-area" class="hidden mt-8 bg-black/20 rounded-2xl p-8 border border-white/10">
-                            <div id="aiContent" class="text-2xl leading-relaxed urdu-font text-center text-amber-50"></div>
-                        </div>
-                    </div>
-                </section>
-            </div>
-
-            <!-- Sidebar -->
-            <div class="lg:col-span-4 space-y-8">
-                <div class="glass-card p-8">
-                    <h4 class="font-bold text-xl mb-6 text-indigo-950">سرچ لائبریری</h4>
-                    <input type="text" id="localInput" onkeyup="localSearch()" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-lg urdu-font focus:ring-2 focus:ring-fuchsia-200 outline-none" placeholder="تحریر تلاش کریں...">
-                </div>
-
-                <div class="glass-card p-8">
-                    <h4 class="font-bold text-xl mb-6 text-indigo-950">مقبول موضوعات</h4>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="px-3 py-1 bg-indigo-50 text-indigo-600 rounded-lg text-sm font-bold">#اداسی</span>
-                        <span class="px-3 py-1 bg-fuchsia-50 text-fuchsia-600 rounded-lg text-sm font-bold">#محبت</span>
-                        <span class="px-3 py-1 bg-amber-50 text-amber-600 rounded-lg text-sm font-bold">#تنہائی</span>
-                        <span class="px-3 py-1 bg-slate-100 text-slate-600 rounded-lg text-sm font-bold">#یادیں</span>
-                    </div>
-                </div>
-
-                <div class="p-8 rounded-[2rem] bg-indigo-900 text-white shadow-xl">
-                    <p class="text-2xl leading-snug mb-6">"کبھی کبھی ایک لفظ پورے جہان کے دکھ سمیٹنے کے لیے کافی ہوتا ہے۔"</p>
-                    <p class="text-left text-fuchsia-400 font-bold">— اقتباس</p>
-                </div>
+    <!-- Main Content -->
+    <div class="container mx-auto px-4 mt-8 flex flex-col lg:flex-row gap-8">
+        
+        <!-- Left Column: Poetry Stream -->
+        <div class="lg:w-2/3">
+            <div class="widget-title mb-6">تازہ ترین شاعری</div>
+            <div id="poetry-feed">
+                <!-- Poetry cards injected here -->
             </div>
         </div>
-    </main>
 
-    <!-- Footer / Contact -->
-    <footer id="contact" class="bg-slate-900 text-white pt-16 pb-8">
-        <div class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-12 text-right">
-            <div>
-                <h5 class="text-2xl font-bold text-fuchsia-500 mb-6">حسن جتوئی</h5>
-                <p class="text-slate-400">میرا قلم میرا گواہ ہے۔ میں آپ کے پیار اور تعاون کا شکر گزار ہوں۔</p>
+        <!-- Right Column: Sidebar -->
+        <div class="lg:w-1/3">
+            <div class="widget-title">شاعر کے بارے میں</div>
+            <div class="bg-gray-50 p-6 border border-gray-200 mb-8">
+                <img src="https://i.ibb.co/XZpNgSJ4/IMG-20251026-WA0025-modified.png" class="w-full h-auto rounded shadow-lg mb-4" alt="شاعر کی تصویر">
+                <p class="text-justify">حسن جتوئی صاحب میھڑ، سندھ سے تعلق رکھنے والے ایک باصلاحیت شاعر ہیں۔ ان کی شاعری انسانی روح، درد اور تنہائی کے گرد گھومتی ہے۔</p>
+                <div class="flex gap-4 mt-4">
+                    <button class="bg-blue-600 text-white px-4 py-2 rounded flex-1"><i class="fab fa-facebook-f mr-2"></i> فالو کریں</button>
+                    <button class="bg-green-600 text-white px-4 py-2 rounded flex-1"><i class="fab fa-whatsapp mr-2"></i> واٹس ایپ</button>
+                </div>
             </div>
-            <div>
-                <h5 class="text-lg font-bold mb-6">سوشل لنکس</h5>
-                <ul class="space-y-3 text-slate-300">
-                    <!-- Replace '#' with your actual social links -->
-                    <li><a href="https://facebook.com" target="_blank" class="hover:text-fuchsia-400 transition-colors">فیس بک آفیشل ↗</a></li>
-                    <li><a href="https://instagram.com" target="_blank" class="hover:text-fuchsia-400 transition-colors">انسٹاگرام ↗</a></li>
-                    <li><a href="https://youtube.com" target="_blank" class="hover:text-fuchsia-400 transition-colors">یوٹیوب چینل ↗</a></li>
-                </ul>
+
+            <div class="widget-title">مقبول نظم کے عنوانات</div>
+            <div class="flex flex-wrap gap-2 mb-8" id="tag-cloud">
+                <!-- Tags will be injected here -->
             </div>
-            <div>
-                <h5 class="text-lg font-bold mb-6">رابطہ کی تفصیلات</h5>
-                <p class="text-slate-400">میھڑ، سندھ، پاکستان</p>
-                <p class="text-amber-400 font-bold mt-2">hassanjatoi.netlify.app</p>
+
+            <div class="widget-title">سیٹنگز</div>
+            <div class="bg-gray-100 p-4 rounded mb-8">
+                <label class="block text-sm mb-2 font-bold">لائنوں کا فاصلہ:</label>
+                <input type="range" min="2" max="4" step="0.1" value="2.2" class="w-full accent-red-600" oninput="document.body.style.lineHeight = this.value">
             </div>
         </div>
-        <div class="text-center mt-16 text-xs text-slate-500 font-bold border-t border-slate-800 pt-8">
-            © 2025 HASSAN JATOI | DESIGNED FOR LITERATURE
+
+    </div>
+
+    <!-- Footer -->
+    <footer class="up-footer">
+        <div class="container mx-auto px-4 text-center">
+            <div class="logo-text text-white opacity-20 text-5xl mb-6">حسن جتوئی</div>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-sm mb-12">
+                <div>
+                    <h5 class="font-bold text-red-500 mb-4">ہمارے بارے میں</h5>
+                    <p>یہ پورٹل حسن جتوئی کے کلام کی ترویج کے لیے وقف ہے۔</p>
+                </div>
+                <div>
+                    <h5 class="font-bold text-red-500 mb-4">لنکس</h5>
+                    <ul><li>تازہ خبریں</li><li>کلامِ نو</li><li>غزلیات</li></ul>
+                </div>
+                <div>
+                    <h5 class="font-bold text-red-500 mb-4">رابطہ</h5>
+                    <p>میھڑ، سندھ، پاکستان</p>
+                    <p>jatoihassan009@gmail.com</p>
+                </div>
+                <div>
+                    <h5 class="font-bold text-red-500 mb-4">سوشل میڈیا</h5>
+                    <div class="flex justify-center gap-4 text-xl">
+                        <i class="fab fa-facebook"></i><i class="fab fa-twitter"></i><i class="fab fa-instagram"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 pt-8">
+                &copy; 2025 اردو پوائنٹ اسٹائل پورٹل - جملہ حقوق بحق حسن جتوئی محفوظ ہیں۔
+            </div>
         </div>
     </footer>
 
     <script>
-        const apiKey = ""; 
+        const imageLibrary = {
+            birds: ["https://images.unsplash.com/photo-1444464666168-49d633b867ad?q=80&w=600", "https://images.unsplash.com/photo-1452570053594-1b985d6ea890?q=80&w=600"],
+            flowers: ["https://images.unsplash.com/photo-1490750967868-88aa4486c946?q=80&w=600", "https://images.unsplash.com/photo-1464852045489-bccb7d17fe39?q=80&w=600"],
+            sad: ["https://images.unsplash.com/photo-1499200632172-c51638d5824e?q=80&w=600", "https://images.unsplash.com/photo-1474540412665-1cdae210ae6b?q=80&w=600"]
+        };
 
-        // Mouse Follower
-        const dot = document.querySelector('.cursor-dot');
-        const outline = document.querySelector('.cursor-outline');
-        window.addEventListener('mousemove', (e) => {
-            dot.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
-            outline.style.transform = `translate(${e.clientX - 11}px, ${e.clientY - 11}px)`;
-        });
+        const poetryData = [
+            { title: "روح کی تنہائی", text: "روح جب اکیلی ہو جائے تو ہجوم بھی سنسان لگتا ہے<br>خاموشی باتیں کرنے لگتی ہے<br>اور انسان خود سے ڈرنے لگتا ہے", cat: 'sad' },
+            { title: "دل کی آواز", text: "دل کی آواز چیختی نہیں<br>بس آہستہ آہستہ اندر بکھرتی رہتی ہے<br>کوئی سنے تو آنکھیں بھی بول اٹھتی ہیں", cat: 'birds' },
+            { title: "خاموش روح", text: "خاموش روح سب کچھ سہہ لیتی ہے<br>شکایت نہیں کرتی<br>بس راتوں میں تھک کر خدا کو یاد کرتی ہے", cat: 'sad' },
+            { title: "روح کا سفر", text: "روح کا سفر قدموں سے نہیں ہوتا<br>یہ درد سے گزرتا ہے<br>اور شعور تک پہنچ کر ٹھہر جاتا ہے", cat: 'flowers' },
+            { title: "خاموش دعا", text: "کچھ دعائیں ہونٹوں تک نہیں آتیں<br>وہ سیدھا دل سے اٹھتی ہیں<br>اور رب تک پہنچ جاتی ہیں", cat: 'birds' },
+            { title: "روح کا بکھراؤ", text: "روح جب بکھرتی ہے<br>تو انسان جُڑ کر بھی<br>ادھورا رہ جاتا ہے", cat: 'sad' }
+        ];
 
-        // Music
-        let isPlaying = false;
-        function toggleMusic() {
-            const music = document.getElementById('bgMusic');
-            const icon = document.getElementById('playIcon');
-            if(isPlaying) {
-                music.pause();
-                icon.innerHTML = '<path d="M11.596 8.697l-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z"/>';
-            } else {
-                music.play().catch(e => console.log("Click required first"));
-                icon.innerHTML = '<path d="M5.5 3.5A.5.5 0 0 1 6 4v8a.5.5 0 0 1-1 0V4a.5.5 0 0 1 .5-.5zm5 0a.5.5 0 0 1 .5.5v8a.5.5 0 0 1-1 0V4a.5.5 0 0 1 .5-.5z"/>';
-            }
-            isPlaying = !isPlaying;
-        }
+        function initApp() {
+            // Clock
+            setInterval(() => {
+                const now = new Date();
+                document.getElementById('live-clock-up').innerText = now.toLocaleTimeString('en-GB');
+                document.getElementById('urdu-date').innerText = now.toLocaleDateString('ur-PK', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
+            }, 1000);
 
-        // Scroll Reveal
-        function reveal() {
-            const reveals = document.querySelectorAll('.reveal');
-            reveals.forEach(el => {
-                const elementTop = el.getBoundingClientRect().top;
-                if (elementTop < window.innerHeight - 50) {
-                    el.classList.add('active');
-                }
-            });
-        }
-        window.addEventListener('scroll', reveal);
-        reveal();
+            // Render Feed
+            const feed = document.getElementById('poetry-feed');
+            const cloud = document.getElementById('tag-cloud');
+            
+            poetryData.forEach((p, i) => {
+                // Card
+                const card = document.createElement('div');
+                card.className = "poetry-card";
+                card.innerHTML = `
+                    <div class="image-box" id="box-${i}">
+                        <img src="${imageLibrary[p.cat][0]}" class="sliding-img active" id="img-${i}-1">
+                        <img src="${imageLibrary[p.cat][1]}" class="sliding-img" id="img-${i}-2">
+                    </div>
+                    <div class="poetry-content">
+                        <h2 class="poetry-title-up">${p.title}</h2>
+                        <div class="poetry-body text-xl">${p.text}</div>
+                        <div class="mt-6 pt-4 border-t flex justify-between items-center text-sm text-gray-500">
+                            <span>اشاعت: 2025</span>
+                            <div class="flex gap-3">
+                                <i class="fab fa-whatsapp text-green-500 cursor-pointer"></i>
+                                <i class="fab fa-facebook text-blue-600 cursor-pointer"></i>
+                                <i class="fas fa-bookmark text-gray-400 cursor-pointer"></i>
+                            </div>
+                        </div>
+                    </div>
+                `;
+                feed.appendChild(card);
 
-        // AI Writing
-        async function askAI() {
-            const input = document.getElementById('userInput').value;
-            const btnText = document.getElementById('btnText');
-            const loader = document.getElementById('loader');
-            const aiArea = document.getElementById('ai-response-area');
-            const aiContent = document.getElementById('aiContent');
+                // Image Animation logic
+                let current = 1;
+                setInterval(() => {
+                    document.getElementById(`img-${i}-${current}`).classList.remove('active');
+                    current = current === 1 ? 2 : 1;
+                    document.getElementById(`img-${i}-${current}`).classList.add('active');
+                }, 3000);
 
-            if (!input.trim()) return;
-
-            btnText.style.display = 'none';
-            loader.classList.remove('hidden');
-
-            const systemPrompt = "آپ ایک مشہور ادیب حسن جتوئی ہیں جو میھڑ سندھ سے تعلق رکھتے ہیں۔ آپ کا نثری انداز حزنیہ، سنجیدہ اور ادبی ہے۔ اپنے جواب میں سادہ مگر گہرے الفاظ استعمال کریں۔";
-
-            try {
-                const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-09-2025:generateContent?key=${apiKey}`, {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({
-                        contents: [{ parts: [{ text: input }] }],
-                        systemInstruction: { parts: [{ text: systemPrompt }] }
-                    })
-                });
-
-                const data = await response.json();
-                const resultText = data.candidates?.[0]?.content?.parts?.[0]?.text || "لفظوں کا ذخیرہ ختم ہو گیا ہے۔";
-                aiContent.innerText = resultText;
-                aiArea.classList.remove('hidden');
-                aiArea.classList.add('animate__animated', 'animate__fadeIn');
-            } catch (err) {
-                aiContent.innerText = "معذرت، رابطہ نہیں ہو سکا۔";
-                aiArea.classList.remove('hidden');
-            } finally {
-                btnText.style.display = 'block';
-                loader.classList.add('hidden');
-            }
-        }
-
-        function localSearch() {
-            let val = document.getElementById('localInput').value.toLowerCase();
-            let cards = document.querySelectorAll('.glass-card');
-            cards.forEach(c => {
-                c.style.display = c.innerText.toLowerCase().includes(val) ? "block" : "none";
+                // Tags
+                const tag = document.createElement('span');
+                tag.className = "bg-gray-200 px-3 py-1 rounded text-xs hover:bg-red-500 hover:text-white cursor-pointer transition";
+                tag.innerText = p.title;
+                cloud.appendChild(tag);
             });
         }
 
-        function googleSearch() {
-            let q = document.getElementById('userInput').value || "Hassan Jatoi Urdu Writer";
-            window.open("https://www.google.com/search?q=" + encodeURIComponent(q), '_blank');
-        }
+        window.onload = initApp;
     </script>
 </body>
 </html>
