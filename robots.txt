@@ -1,4 +1,10 @@
+Hassan Jatoi Official Portal - Robots.txt
+
+This file tells search engine crawlers which pages to access.
+
 User-agent: *
 Allow: /
 
-Sitemap: https://hassanalipoetry.vercel.app/sitemap.xml
+Direct link to your sitemap on GitHub Pages
+
+Sitemap: https://www.google.com/search?q=https://hassanaliuk11-oss.github.io/hassanjatoiurdu-/sitemap.xml
