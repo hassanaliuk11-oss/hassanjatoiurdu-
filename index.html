@@ -14,9 +14,6 @@
     <meta name="author" content="Hassan Jatoi">
     <meta name="robots" content="index, follow, max-image-preview:large">
     
-    <!-- XML Sitemap Reference -->
-    <link rel="sitemap" type="application/xml" title="Sitemap" href="https://hassanaliuk11-oss.github.io/hassanjatoiurdu-/sitemap.xml">
-    
     <!-- Canonical URL -->
     <link rel="canonical" href="https://hassanaliuk11-oss.github.io/hassanjatoiurdu-/">
 
@@ -28,7 +25,7 @@
     <meta property="og:url" content="https://hassanaliuk11-oss.github.io/hassanjatoiurdu-/">
     <meta name="twitter:card" content="summary_large_image">
 
-    <!-- Google Structured Data (Schema.org) - Linking all profiles for Authority -->
+    <!-- Google Structured Data (Schema.org) -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -43,14 +40,11 @@
         "https://hassanalipoetry.vercel.app/",
         "https://hassanaliuk11-oss.github.io/Hassanalipoetry-/",
         "https://allpoetry.com/Hassan_jatoi"
-      ],
-      "mainEntityOfPage": {
-        "@type": "WebPage",
-        "@id": "https://hassanaliuk11-oss.github.io/hassanjatoiurdu-/"
-      }
+      ]
     }
     </script>
     
+    <!-- Fonts & Icons -->
     <link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400;700&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -61,148 +55,253 @@
             src: url('https://cdn.jsdelivr.net/gh/m-bilal/jameel-noori-nastaleeq@master/Jameel%20Noori%20Nastaleeq.ttf') format('truetype');
         }
         :root {
-            --poetry-black: #111111;
-            --accent-gold: #b4934a;
+            --up-red: #c00000;
+            --up-gray: #f2f2f2;
             --font-main: 'Jameel Noori Nastaleeq', 'Noto Nastaliq Urdu', serif;
         }
         body {
             font-family: var(--font-main);
-            background-color: #f9fafb;
-            color: var(--poetry-black);
+            background-color: var(--up-gray);
+            color: #333;
             margin: 0;
             padding: 0;
             scroll-behavior: smooth;
+            overflow-x: hidden;
         }
-        .nastaleeq { line-height: 2.8; font-weight: 700; font-size: 1.4rem; }
-        @media (min-width: 768px) { .nastaleeq { line-height: 3.6; font-size: 2.1rem; } }
-        .minimal-header { background: white; border-bottom: 1px solid #e5e7eb; padding-bottom: 2rem; }
-        .header-profile-img { width: 140px; height: 140px; object-fit: cover; border-radius: 50%; border: 5px solid white; box-shadow: 0 10px 30px rgba(0,0,0,0.1); margin: 0 auto 1.5rem auto; display: block; }
-        .share-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid #f3f4f6; }
-        .share-btn { display: flex; align-items: center; justify-content: center; width: 42px; height: 42px; border-radius: 50%; color: white; transition: all 0.3s ease; cursor: pointer; }
-        .bg-whatsapp { background-color: #25D366; }
-        .bg-facebook { background-color: #1877F2; }
-        .bg-x { background-color: #000000; }
-        .bg-linkedin { background-color: #0077b5; }
-        .bg-copy { background-color: #4b5563; }
-        .sidebar-card { background: white; border: 1px solid #f0f0f0; border-radius: 24px; padding: 2rem; }
+        .urdu-font { font-family: var(--font-main); }
+        
+        .poem-header { 
+            background: #ffffff; 
+            border-bottom: 2px solid var(--up-red); 
+            padding: 25px 15px; 
+            color: var(--up-red); 
+            font-weight: bold; 
+            text-align: center;
+            font-size: 2.4rem;
+            line-height: 1.3;
+            box-shadow: inset 0 -5px 10px rgba(0,0,0,0.02);
+        }
+
+        .nastaleeq { 
+            font-family: var(--font-main); 
+            line-height: 3; 
+            font-weight: 700; 
+            font-size: 1.9rem; 
+            color: #1a1a1a;
+            white-space: pre-line;
+            word-wrap: break-word;
+            padding: 20px;
+            display: block;
+        }
+
+        @media (max-width: 640px) {
+            .poem-header { font-size: 1.8rem; padding: 20px 10px; }
+            .nastaleeq { font-size: 1.5rem; line-height: 2.6; padding: 15px; }
+            .profile-img { width: 130px; height: 130px; }
+        }
+        
+        .up-nav { background: #fff; border-bottom: 3px solid var(--up-red); box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
+        .up-top-bar { background: #222; color: white; font-size: 12px; padding: 6px 0; }
+        .profile-section { background: white; border-bottom: 1px solid #eee; padding: 40px 0; }
+        .poem-card { background: white; border: 1px solid #ddd; border-radius: 8px; margin-bottom: 35px; transition: all 0.3s ease; width: 100%; box-shadow: 0 4px 6px rgba(0,0,0,0.02); }
+        .poem-card:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(0,0,0,0.08); }
+        
+        .btn-red { background-color: var(--up-red); color: white; padding: 12px 30px; border-radius: 4px; font-weight: bold; transition: all 0.2s; display: inline-flex; align-items: center; gap: 8px; }
+        .btn-red:hover { background-color: #a00000; transform: scale(1.02); }
+        
+        .share-icon { width: 45px; height: 45px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; color: white; margin: 0 6px; font-size: 20px; transition: transform 0.2s; }
+        .share-icon:hover { transform: scale(1.1); }
+        .wa { background: #25d366; } .fb { background: #3b5998; } .tw { background: #000; } .cp { background: #555; }
+
+        .sidebar-box { background: white; border-radius: 4px; border: 1px solid #eee; overflow: hidden; box-shadow: 0 2px 5px rgba(0,0,0,0.03); }
+        .sidebar-title { background: #333; color: white; padding: 12px; font-weight: bold; text-align: center; }
     </style>
 </head>
 <body>
 
-    <nav class="bg-white py-2 px-4 border-b border-gray-100 flex justify-between items-center text-[10px] text-gray-400">
-        <div id="urdu-date">تاریخ لوڈ ہو رہی ہے...</div>
-        <div id="live-clock" class="font-mono font-bold">00:00:00</div>
+    <!-- Top Bar -->
+    <div class="up-top-bar">
+        <div class="container mx-auto px-4 flex justify-between items-center">
+            <div id="urdu-date" class="urdu-font">جمعہ، 16 جنوری 2026</div>
+            <div class="flex gap-4">
+                <a href="#" class="hover:text-red-500"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="hover:text-blue-400"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="hover:text-pink-500"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="up-nav py-4 sticky top-0 z-40">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center">
+            <div class="text-3xl font-bold text-red-700 italic urdu-font">حسن جتوئی <span class="text-gray-800 font-sans not-italic">Official</span></div>
+            <div class="flex gap-4 md:gap-8 font-bold text-sm text-gray-700 mt-4 md:mt-0 urdu-font">
+                <a href="#" class="text-red-700 border-b-2 border-red-700 pb-1">صفحہ اول</a>
+                <a href="#poetry-list" class="hover:text-red-700 transition-colors">اردو شاعری</a>
+                <a href="mailto:jatoihassan009@gmail.com" class="hover:text-red-700 transition-colors">ای میل</a>
+            </div>
+        </div>
     </nav>
 
-    <header class="minimal-header py-10 text-center">
+    <!-- Profile Intro -->
+    <section class="profile-section">
         <div class="container mx-auto px-4">
-            <img src="https://i.ibb.co/XZpNgSJ4/IMG-20251026-WA0025-modified.png" alt="حسن جتوئی کا آفیشل پورٹل" class="header-profile-img">
-            <h1 class="text-5xl md:text-8xl font-black text-gray-900 mb-2">حسن جتوئی</h1>
-            <p class="text-gray-400 text-xs md:text-sm tracking-[0.3em] uppercase font-sans font-bold">Hassan Jatoi - Official Poetry Portal</p>
-            <div class="w-16 h-1 bg-[#b4934a] mx-auto my-4"></div>
-            <div class="inline-block border border-gray-900 px-6 py-1 rounded-full text-xs font-black">شاعرِ مشرقِ سندھ</div>
-        </div>
-    </header>
-
-    <main class="container mx-auto px-4 py-8 md:py-16">
-        <div class="flex flex-col lg:flex-row gap-8">
-            <article class="lg:w-2/3 space-y-12 text-center">
-                <!-- SEO Heading for Google -->
-                <h2 class="sr-only">حسن جتوئی کا بہترین اردو کلام</h2>
-                <section id="latest-kalam-container"></section>
-                <h3 class="text-2xl md:text-3xl font-black text-gray-900 py-10">منتخب اردو کلام و غزلیں</h3>
-                <section id="poetry-grid" class="space-y-12"></section>
-            </article>
-
-            <aside class="lg:w-1/3">
-                <div class="sidebar-card sticky top-6 text-center shadow-sm">
-                    <h3 class="text-xl font-black mb-4">تعارفِ شاعر</h3>
-                    <p class="text-gray-600 italic mb-8 leading-relaxed">
-                        "حسن جتوئی ایک صاحبِ طرز شاعر ہیں جن کے کلام میں سندھ کی مٹی کی خوشبو اور اردو کی چاشنی ایک ساتھ ملتی ہے۔"
-                    </p>
-                    <div class="flex justify-center gap-6 mb-8">
-                        <a href="https://wa.me/923083500829" aria-label="WhatsApp Contact" class="text-gray-400 hover:text-green-500 transition-colors"><i class="fab fa-whatsapp fa-2x"></i></a>
-                        <a href="mailto:jatoihassan009@gmail.com" aria-label="Email Contact" class="text-gray-400 hover:text-blue-500 transition-colors"><i class="far fa-envelope fa-2x"></i></a>
+            <div class="flex flex-col md:flex-row gap-10 items-center text-center md:text-right">
+                <div class="relative">
+                    <img src="https://i.ibb.co/XZpNgSJ4/IMG-20251026-WA0025-modified.png" alt="حسن جتوئی" class="profile-img rounded-xl border-4 border-white shadow-2xl mx-auto">
+                    <div class="absolute -bottom-2 -right-2 bg-green-500 w-6 h-6 rounded-full border-4 border-white"></div>
+                </div>
+                <div class="flex-grow">
+                    <h1 class="text-4xl md:text-5xl font-bold text-gray-800 urdu-font mb-3">حسن جتوئی</h1>
+                    <h2 class="text-xl text-red-700 font-bold mb-5 urdu-font">شاعرِ مشرقِ سندھ</h2>
+                    <div class="bg-red-50 p-6 rounded-xl border-r-8 border-red-700 text-gray-700 urdu-font text-xl leading-relaxed mb-6">
+                        "میری شاعری میرے احساسات کی ترجمان ہے، جس میں محبت، درد اور سماج کی جھلک صاف نظر آتی ہے۔"
                     </div>
-                    <div class="border-t border-gray-100 pt-6 space-y-3">
-                        <p class="text-[10px] text-gray-400 uppercase font-bold mb-4 tracking-widest">ہمارے دیگر پلیٹ فارمز</p>
-                        <a href="https://www.urdupoint.com/poetry/user-poet/hassan-jatoi-27314.html" target="_blank" class="block py-2 text-[11px] font-bold border border-gray-200 rounded-xl hover:bg-gray-900 hover:text-white transition-all">Urdu Point</a>
-                        <a href="https://hassanalipoetry.vercel.app/" target="_blank" class="block py-2 text-[11px] font-bold border border-gray-200 rounded-xl hover:bg-gray-900 hover:text-white transition-all">Vercel Poetry Portal</a>
-                        <a href="https://allpoetry.com/Hassan_jatoi" target="_blank" class="block py-2 text-[11px] font-bold border border-gray-200 rounded-xl hover:bg-gray-900 hover:text-white transition-all">All Poetry</a>
+                    <div class="flex flex-wrap justify-center md:justify-start gap-4">
+                        <!-- Number Hidden, only link -->
+                        <a href="https://wa.me/923083500829" target="_blank" class="btn-red urdu-font text-lg shadow-lg"><i class="fab fa-whatsapp"></i> واٹس ایپ پر کلام منگوائیں</a>
+                        <a href="#poetry-list" class="bg-gray-100 text-gray-800 px-8 py-3 rounded-md font-bold hover:bg-gray-200 transition-all urdu-font">کلام دیکھیں</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-16">
+        <div class="flex flex-col lg:flex-row gap-12">
+            
+            <!-- Poetry Section -->
+            <div id="poetry-list" class="lg:w-2/3">
+                <div class="flex items-center gap-4 mb-10">
+                    <div class="h-1 flex-grow bg-gray-200"></div>
+                    <h3 class="text-3xl font-bold urdu-font text-gray-800">منتخب اردو کلام</h3>
+                    <div class="h-1 flex-grow bg-gray-200"></div>
+                </div>
+                
+                <div id="poetry-container" class="space-y-12">
+                    <!-- Poetry will be injected by JavaScript -->
+                </div>
+            </div>
+
+            <!-- Sidebar -->
+            <aside class="lg:w-1/3 space-y-8">
+                <!-- Contact Info - Number hidden from text -->
+                <div class="sidebar-box">
+                    <div class="sidebar-title urdu-font text-lg">رابطہ برائے مشاعرہ</div>
+                    <div class="p-8 text-center">
+                        <p class="urdu-font text-gray-600 mb-6 leading-relaxed">مشاعرے یا ادبی پروگرام کے لیے واٹس ایپ پر رابطہ کریں:</p>
+                        <a href="https://wa.me/923083500829" target="_blank" class="inline-block bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-full font-bold urdu-font transition-all shadow-md">
+                            <i class="fab fa-whatsapp ml-2"></i> واٹس ایپ میسج کریں
+                        </a>
+                        <div class="mt-6 flex justify-center gap-2">
+                            <span class="bg-green-100 text-green-700 px-3 py-1 rounded-full text-xs font-bold font-sans">ACTIVE ONLINE</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Links -->
+                <div class="sidebar-box">
+                    <div class="sidebar-title urdu-font text-lg">اہم لنکس</div>
+                    <div class="divide-y divide-gray-100 urdu-font">
+                        <a href="https://www.urdupoint.com/poetry/user-poet/hassan-jatoi-27314.html" target="_blank" class="block p-4 hover:bg-red-50 text-gray-700 hover:text-red-700 transition-colors">اردو پوائنٹ پروفائل</a>
+                        <a href="https://hassanalipoetry.vercel.app/" target="_blank" class="block p-4 hover:bg-red-50 text-gray-700 hover:text-red-700 transition-colors">ورسل پوئٹری پورٹل</a>
+                        <a href="https://allpoetry.com/Hassan_jatoi" target="_blank" class="block p-4 hover:bg-red-50 text-gray-700 hover:text-red-700 transition-colors">انٹرنیشنل پوئٹری لنک</a>
                     </div>
                 </div>
             </aside>
         </div>
     </main>
 
-    <footer class="bg-white border-t border-gray-100 py-12 text-center">
-        <p class="text-[10px] text-gray-400 font-bold tracking-widest uppercase">&copy; 2026 Hassan Jatoi Official - All Rights Reserved</p>
-        <p class="text-[9px] text-gray-300 mt-2">Connecting all official poetry platforms of Hassan Jatoi</p>
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-500 py-16 text-center border-t-4 border-red-700">
+        <div class="container mx-auto px-4">
+            <h2 class="urdu-font text-3xl text-white mb-4">حسن جتوئی آفیشل</h2>
+            <div class="flex justify-center gap-4 mb-8">
+                <a href="https://wa.me/923083500829" target="_blank" class="text-gray-400 hover:text-green-500 text-2xl transition-colors"><i class="fab fa-whatsapp"></i></a>
+                <a href="mailto:jatoihassan009@gmail.com" class="text-gray-400 hover:text-red-600 text-2xl transition-colors"><i class="far fa-envelope"></i></a>
+            </div>
+            <p class="urdu-font mb-8 text-lg max-w-xl mx-auto">تمام حقوق محفوظ ہیں۔ کلام شیئر کرنے کی صورت میں شاعر کا نام ضرور لکھیں۔</p>
+            <div class="text-[10px] font-sans tracking-[0.3em] uppercase text-gray-600">
+                &copy; 2026 OFFICIAL PORTAL | DESIGNED FOR EXCELLENCE
+            </div>
+        </div>
     </footer>
 
-    <div id="toast" class="fixed bottom-6 left-1/2 -translate-x-1/2 bg-gray-900 text-white px-8 py-3 rounded-full opacity-0 transition-all z-50 pointer-events-none shadow-2xl">کلام کاپی کر لیا گیا</div>
+    <!-- Toast -->
+    <div id="toast" class="fixed bottom-10 left-1/2 -translate-x-1/2 bg-gray-800 text-white px-10 py-4 rounded-full shadow-2xl opacity-0 transition-all z-50 pointer-events-none urdu-font text-lg">کلام کاپی کر لیا گیا!</div>
 
     <script>
         const poetryData = [
-            { id: 'main', title: "کبھی فرصت ملے تو ملنا", text: "کبھی فرصت ملے تو ملنا نچوڑ دونگا تجھے\nسنا ہے آپ ٹوٹے ہوے ہیں جوڑ دونگا تجھے\n\nاور عشق کے آداب سے واقف ہی نہیں دنیا\nپرواز میں ایلیاء ہے ، راز کھول دونگا تجھے\n\nاور میری دل گناھگار اب مطمئن ہے بھت\nاے مطلبی دنیا جلد ہی چھوڑ دونگا تجھے\n\nمیں مے میں ہوں، اور نشہ مجھ ہی میں ہے\nشراب کی کیا اوقات ، بوتل توڑ دونگا تجھے\n\nزاہد کو غرور ہے بہت، اپنی عبادت پر حسن\nمیں گر چاہوں تو کہکشاں توڑ دونگا تجھے" },
-            { id: 1, title: "جدید غزل", text: "ہماری خاموشی میں بھی ہزاروں داستانیں ہیں\nتمہارے لفظ تو بس ریت کے گھروندے ہیں\n\nجہاں زمین ختم ہو وہاں سے ہمیں دیکھنا\nہم آسماں کے پرے بھی قدم رکھتے ہیں" }
+            {
+                title: "کبھی فرصت ملے تو ملنا",
+                text: "کبھی فرصت ملے تو ملنا نچوڑ دونگا تجھے\nسنا ہے آپ ٹوٹے ہوے ہیں جوڑ دونگا تجھے\n\nاور عشق کے آداب سے واقف ہی نہیں دنیا\nپرواز میں ایلیاء ہے ، راز کھول دونگا تجھے\n\nاور میری دل گناھگار اب مطمئن ہے بھت\nاے مطلبی دنیا جلدی ہی چھوڑ دونگا تجھے\n\nمیں مے میں ہوں، اور نشہ مجھ ہی میں ہے\nشراب کی کیا اوقات ، بوتل توڑ دونگا تجھے\n\nزاہد کو غرور ہے بہت، اپنی عبادت پر حسن\nمیں گر چاہوں تو کہکشاں توڑ دونگا تجھے"
+            },
+            {
+                title: "تازہ کلام (سندھ کی خوشبو)",
+                text: "مری مٹی سے آتی ہے اردو کی وہی خوشبو\nمیں سندھی ہوں مگر لہجہ مرا بالکل لکھنؤ سا ہے\n\nمحبت بانٹتا ہوں میں سبھی انسانوں میں حسن\nمرا یہ مشغلہ دیکھو ، کتنا ہی خوب سا ہے"
+            }
         ];
 
-        function render() {
-            const grid = document.getElementById('poetry-grid');
-            const mainContainer = document.getElementById('latest-kalam-container');
-            poetryData.forEach((p, index) => {
-                const formattedText = p.text.replace(/\n/g, '<br>');
-                const shareHtml = `
-                    <div class="share-grid">
-                        <button onclick="share('whatsapp', \`${p.text}\`)" class="share-btn bg-whatsapp" aria-label="Share on WhatsApp"><i class="fab fa-whatsapp"></i></button>
-                        <button onclick="share('facebook', \`${p.text}\`)" class="share-btn bg-facebook" aria-label="Share on Facebook"><i class="fab fa-facebook-f"></i></button>
-                        <button onclick="share('x', \`${p.text}\`)" class="share-btn bg-x" aria-label="Share on X"><i class="fab fa-x-twitter"></i></button>
-                        <button onclick="share('linkedin', \`${p.text}\`)" class="share-btn bg-linkedin" aria-label="Share on LinkedIn"><i class="fab fa-linkedin-in"></i></button>
-                        <button onclick="copyToClipboard(\`${p.text}\`)" class="share-btn bg-copy" aria-label="Copy Poem"><i class="fas fa-copy"></i></button>
+        function renderPoetry() {
+            const container = document.getElementById('poetry-container');
+            if(!container) return;
+            poetryData.forEach((p) => {
+                container.innerHTML += `
+                    <div class="poem-card overflow-hidden">
+                        <div class="poem-header urdu-font">
+                            ${p.title}
+                        </div>
+                        <div class="p-6 md:p-16 text-center">
+                            <div class="nastaleeq urdu-font">${p.text}</div>
+                            <div class="flex justify-center items-center gap-4 mt-12 pt-10 border-t border-gray-100">
+                                <button onclick="share('wa', \`${p.text}\`)" class="share-icon wa" title="Share on WhatsApp"><i class="fab fa-whatsapp"></i></button>
+                                <button onclick="share('fb', \`${p.text}\`)" class="share-icon fb" title="Share on Facebook"><i class="fab fa-facebook-f"></i></button>
+                                <button onclick="copyPoem(\`${p.text}\`)" class="share-icon cp" title="Copy Text"><i class="fas fa-copy"></i></button>
+                            </div>
+                        </div>
                     </div>
                 `;
-                const cardHtml = `<div class="${index === 0 ? 'bg-white border-2 border-black rounded-[2rem] p-8 md:p-12 shadow-xl' : 'bg-white border border-gray-100 rounded-[2rem] p-8 md:p-12'}">
-                    <h2 class="text-2xl md:text-4xl font-black mb-8 text-gray-900">${p.title}</h2>
-                    <p class="nastaleeq text-gray-800">${formattedText}</p>
-                    ${shareHtml}
-                </div>`;
-                if(index === 0) mainContainer.innerHTML = cardHtml;
-                else grid.innerHTML += cardHtml;
             });
         }
 
-        function copyToClipboard(text) {
-            const textArea = document.createElement("textarea");
-            textArea.value = text + "\n\n— حسن جتوئی (آفیشل پورٹل)";
-            document.body.appendChild(textArea);
-            textArea.select();
+        function copyPoem(text) {
+            const fullText = text + "\n\n— شاعر: حسن جتوئی\n" + window.location.href;
+            const el = document.createElement('textarea');
+            el.value = fullText;
+            document.body.appendChild(el);
+            el.select();
             document.execCommand('copy');
-            document.body.removeChild(textArea);
-            const t = document.getElementById('toast');
-            t.style.opacity = '1';
-            setTimeout(() => t.style.opacity = '0', 2000);
+            document.body.removeChild(el);
+            
+            const toast = document.getElementById('toast');
+            toast.style.opacity = '1';
+            toast.style.bottom = '40px';
+            setTimeout(() => {
+                toast.style.opacity = '0';
+                toast.style.bottom = '10px';
+            }, 2000);
         }
 
         function share(platform, text) {
-            const fullText = text + "\n\n— حسن جتوئی\n" + window.location.href;
-            let shareUrl = "";
-            switch(platform) {
-                case 'whatsapp': shareUrl = `https://api.whatsapp.com/send?text=${encodeURIComponent(fullText)}`; break;
-                case 'facebook': shareUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(window.location.href)}`; break;
-                case 'x': shareUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(text + "\n— حسن جتوئی")}&url=${encodeURIComponent(window.location.href)}`; break;
-                case 'linkedin': shareUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(window.location.href)}`; break;
-            }
-            window.open(shareUrl, '_blank');
+            const fullText = encodeURIComponent(text + "\n\n— شاعر: حسن جتوئی\n" + window.location.href);
+            let url = "";
+            if(platform === 'wa') url = `https://api.whatsapp.com/send?phone=923083500829&text=${fullText}`;
+            if(platform === 'fb') url = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(window.location.href)}`;
+            window.open(url, '_blank');
         }
 
-        function updateClock() { document.getElementById('live-clock').innerText = new Date().toLocaleTimeString('en-GB'); }
         function updateDate() {
-            const opt = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', calendar: 'islamic-uma' };
-            try { document.getElementById('urdu-date').innerText = new Intl.DateTimeFormat('ur-PK', opt).format(new Date()); }
-            catch(e) { document.getElementById('urdu-date').innerText = new Date().toLocaleDateString('ur-PK'); }
+            const now = new Date();
+            const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+            const dateEl = document.getElementById('urdu-date');
+            if(dateEl) dateEl.innerText = now.toLocaleDateString('ur-PK', options);
         }
-        window.onload = () => { render(); updateDate(); setInterval(updateClock, 1000); };
+
+        window.onload = () => {
+            renderPoetry();
+            updateDate();
+        };
     </script>
 </body>
 </html>
