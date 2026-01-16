@@ -5,6 +5,6 @@ This file tells search engine crawlers which pages to access.
 User-agent: *
 Allow: /
 
-Direct link to your sitemap on GitHub Pages
+Correct link to your sitemap (Direct URL, not search URL)
 
-Sitemap: https://www.google.com/search?q=https://hassanaliuk11-oss.github.io/hassanjatoiurdu-/sitemap.xml
+Sitemap: https://www.google.com/url?sa=E&source=gmail&q=https://hassanaliuk11-oss.github.io/hassanjatoiurdu-/sitemap.xm
