@@ -1,11 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
-  <url>
-    <loc>https://hassanaliuk11-oss.github.io/hassanjatoiurdu-/</loc>
-    <lastmod>2026-01-16</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
+<urlset xmlns="[suspicious link removed]"
+xmlns:xsi="https://www.google.com/search?q=http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="[suspicious link removed]
+[suspicious link removed]">
 
+<!-- Hassan Jatoi Official Portal Sitemap -->
+
+<url>
+<loc>https://your-domain.com/</loc>
+<lastmod>2026-01-16T12:00:00+00:00</lastmod>
+<changefreq>weekly</changefreq>
+<priority>1.00</priority>
+</url>
 </urlset>
