@@ -8,9 +8,9 @@
     <meta name="google-site-verification" content="osYdOuuf3r5YsXAVU40owhWn9WxCsDC6NnsboPJs1Qg" />
 
     <!-- Advanced SEO Meta Tags -->
-    <title>درد دل کی داستان | آفیشل اردو شاعری پورٹل - شاعرِ  حسن جتوئی </title>
-    <meta name="description" content="شاعرِ حسن جتوئی کا آفیشل پورٹل۔ یہاں آپ حسن جتوئی کا بہترین اردو کلام، غزلیں، اور نظمیں پڑھ سکتے ہیں۔">
-    <meta name="keywords" content="Hassan Jatoi, Hassan Jatoi Urdu Poetry, Hassan Jatoi Kalam, Shayer e Mashriq e Sindh, حسن جتوئی, اردو شاعری, حسن جتوئی کا کلام, کلامِ حسن جتوئی, شاعری پورٹل">
+    <title>درد دل کی داستان | آفیشل اردو شاعری پورٹل - شاعرِ حسن جتوئی </title>
+    <meta name="description" content="شاعرِ حسن جتوئی کا آفیشل پورٹل۔ یہاں آپ ان کا بہترین اور تازہ اردو کلام، غزلیں اور نظمیں پڑھ سکتے ہیں۔ شاعرِ مشرقِ سندھ حسن جتوئی کا کلام۔">
+    <meta name="keywords" content="Hassan Jatoi, Hassan Jatoi Urdu Poetry, Hassan Jatoi Kalam, Shayer e Mashriq e Sindh, حسن جتوئی, اردو شاعری, حسن جتوئی ka kalam, کلامِ حسن جتوئی, شاعری پورٹل, سندھی شاعر, دردِ دل کی داستان, hassanalipoetry">
     <meta name="author" content="Hassan Jatoi">
     <meta name="robots" content="index, follow, max-image-preview:large">
     
@@ -25,21 +25,23 @@
     <meta property="og:url" content="https://hassanaliuk11-oss.github.io/hassanjatoiurdu-/">
     <meta name="twitter:card" content="summary_large_image">
 
-    <!-- Google Structured Data (Schema.org) -->
+    <!-- JSON-LD Structured Data for SEO -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "Person",
       "name": "Hassan Jatoi",
-      "alternateName": ["حسن جتوئی", "شاعرِ مشرقِ سندھ"],
-      "description": "Hassan Jatoi is a renowned Urdu Poet from Sindh, widely known for his soulful poetry and unique style.",
+      "jobTitle": "Urdu Poet",
+      "alternateName": "شاعرِ مشرقِ سندھ",
+      "description": "Hassan Jatoi is a renowned Urdu Poet from Sindh, widely known for his soulful poetry and unique style. Known as Shayer-e-Mashriq-e-Sindh.",
       "url": "https://hassanaliuk11-oss.github.io/hassanjatoiurdu-/",
       "image": "https://i.ibb.co/XZpNgSJ4/IMG-20251026-WA0025-modified.png",
       "sameAs": [
         "https://www.urdupoint.com/poetry/user-poet/hassan-jatoi-27314.html",
         "https://hassanalipoetry.vercel.app/",
-        "https://hassanaliuk11-oss.github.io/Hassanalipoetry-/",
-        "https://allpoetry.com/Hassan_jatoi"
+        "https://wa.me/923083500829",
+        "https://share.google/tO6cO3yNLwVwv9TwI",
+        "https://www.google.com/search?q=hassanalipoetry"
       ]
     }
     </script>
@@ -66,55 +68,103 @@
             margin: 0;
             padding: 0;
             scroll-behavior: smooth;
-            overflow-x: hidden;
         }
         .urdu-font { font-family: var(--font-main); }
         
+        .up-nav { 
+            background: #fff; 
+            border-bottom: 3px solid var(--up-red); 
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05); 
+            padding: 18px 0;
+        }
+        .header-title {
+            font-size: 2.5rem;
+            color: var(--up-red);
+            font-weight: bold;
+            text-align: center;
+            width: 100%;
+            display: block;
+            line-height: 1.4;
+        }
+
         .poem-header { 
             background: #ffffff; 
             border-bottom: 2px solid var(--up-red); 
-            padding: 25px 15px; 
+            padding: 10px 8px; 
             color: var(--up-red); 
             font-weight: bold; 
             text-align: center;
-            font-size: 2.4rem;
-            line-height: 1.3;
-            box-shadow: inset 0 -5px 10px rgba(0,0,0,0.02);
+            font-size: 1.6rem;
+            line-height: 1.1;
         }
 
         .nastaleeq { 
             font-family: var(--font-main); 
-            line-height: 3; 
+            line-height: 1.9; 
             font-weight: 700; 
-            font-size: 1.9rem; 
+            font-size: 1.6rem; 
             color: #1a1a1a;
             white-space: pre-line;
-            word-wrap: break-word;
-            padding: 20px;
+            padding: 10px 15px;
             display: block;
         }
 
         @media (max-width: 640px) {
-            .poem-header { font-size: 1.8rem; padding: 20px 10px; }
-            .nastaleeq { font-size: 1.5rem; line-height: 2.6; padding: 15px; }
-            .profile-img { width: 130px; height: 130px; }
+            .header-title { font-size: 1.7rem; line-height: 1.3; }
+            .poem-header { font-size: 1.25rem; padding: 8px 5px; }
+            .nastaleeq { font-size: 1.15rem; line-height: 1.6; padding: 5px 8px; }
+            .profile-img { width: 90px; height: 90px; }
+            .profile-section { padding: 15px 0; }
         }
         
-        .up-nav { background: #fff; border-bottom: 3px solid var(--up-red); box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
-        .up-top-bar { background: #222; color: white; font-size: 12px; padding: 6px 0; }
-        .profile-section { background: white; border-bottom: 1px solid #eee; padding: 40px 0; }
-        .poem-card { background: white; border: 1px solid #ddd; border-radius: 8px; margin-bottom: 35px; transition: all 0.3s ease; width: 100%; box-shadow: 0 4px 6px rgba(0,0,0,0.02); }
-        .poem-card:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(0,0,0,0.08); }
+        .up-top-bar { background: #222; color: white; font-size: 11px; padding: 4px 0; }
+        .profile-section { background: white; border-bottom: 1px solid #eee; padding: 30px 0; }
+        .poem-card { background: white; border: 1px solid #ddd; border-radius: 6px; margin-bottom: 20px; transition: all 0.3s ease; width: 100%; overflow: hidden; }
         
-        .btn-red { background-color: var(--up-red); color: white; padding: 12px 30px; border-radius: 4px; font-weight: bold; transition: all 0.2s; display: inline-flex; align-items: center; gap: 8px; }
-        .btn-red:hover { background-color: #a00000; transform: scale(1.02); }
+        .btn-red { background-color: var(--up-red); color: white; padding: 10px 22px; border-radius: 4px; font-weight: bold; font-size: 15px; display: inline-flex; align-items: center; gap: 8px; }
         
-        .share-icon { width: 45px; height: 45px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; color: white; margin: 0 6px; font-size: 20px; transition: transform 0.2s; }
-        .share-icon:hover { transform: scale(1.1); }
-        .wa { background: #25d366; } .fb { background: #3b5998; } .tw { background: #000; } .cp { background: #555; }
+        /* Updated Share Icons Grid */
+        .share-bar {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 1px solid #f0f0f0;
+        }
+        .share-icon { 
+            width: 38px; 
+            height: 38px; 
+            border-radius: 50%; 
+            display: inline-flex; 
+            align-items: center; 
+            justify-content: center; 
+            color: white; 
+            font-size: 16px; 
+            cursor: pointer; 
+            transition: all 0.2s ease;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .share-icon:hover { transform: translateY(-3px); box-shadow: 0 4px 8px rgba(0,0,0,0.15); }
+        
+        .wa { background: #25d366; } /* WhatsApp */
+        .fb { background: #1877f2; } /* Facebook */
+        .tw { background: #000000; } /* X / Twitter */
+        .li { background: #0a66c2; } /* LinkedIn */
+        .tg { background: #0088cc; } /* Telegram */
+        .cp { background: #555555; } /* Copy */
 
-        .sidebar-box { background: white; border-radius: 4px; border: 1px solid #eee; overflow: hidden; box-shadow: 0 2px 5px rgba(0,0,0,0.03); }
-        .sidebar-title { background: #333; color: white; padding: 12px; font-weight: bold; text-align: center; }
+        .sidebar-box { background: white; border-radius: 4px; border: 1px solid #eee; overflow: hidden; margin-bottom: 20px; }
+        .sidebar-title { background: #333; color: white; padding: 10px; font-weight: bold; text-align: center; font-size: 14px; }
+        
+        .nav-links {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            margin-top: 12px;
+            font-size: 15px;
+        }
     </style>
 </head>
 <body>
@@ -122,121 +172,121 @@
     <!-- Top Bar -->
     <div class="up-top-bar">
         <div class="container mx-auto px-4 flex justify-between items-center">
-            <div id="urdu-date" class="urdu-font">جمعہ، 16 جنوری 2026</div>
+            <div id="urdu-date" class="urdu-font"></div>
             <div class="flex gap-4">
-                <a href="#" class="hover:text-red-500"><i class="fab fa-facebook-f"></i></a>
-                <a href="#" class="hover:text-blue-400"><i class="fab fa-twitter"></i></a>
-                <a href="#" class="hover:text-pink-500"><i class="fab fa-instagram"></i></a>
+                <a href="https://wa.me/923083500829" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp text-white"></i></a>
+                <a href="https://share.google/tO6cO3yNLwVwv9TwI" target="_blank" aria-label="Google Share"><i class="fab fa-google text-white"></i></a>
             </div>
         </div>
     </div>
 
-    <!-- Navigation -->
-    <nav class="up-nav py-4 sticky top-0 z-40">
-        <div class="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center">
-            <div class="text-3xl font-bold text-red-700 italic urdu-font">حسن جتوئی <span class="text-gray-800 font-sans not-italic">Official</span></div>
-            <div class="flex gap-4 md:gap-8 font-bold text-sm text-gray-700 mt-4 md:mt-0 urdu-font">
-                <a href="#" class="text-red-700 border-b-2 border-red-700 pb-1">صفحہ اول</a>
-                <a href="#poetry-list" class="hover:text-red-700 transition-colors">اردو شاعری</a>
-                <a href="mailto:jatoihassan009@gmail.com" class="hover:text-red-700 transition-colors">ای میل</a>
+    <!-- Navigation (Centered Large Header) -->
+    <nav class="up-nav sticky top-0 z-40">
+        <div class="container mx-auto px-4">
+            <div class="header-title urdu-font">ستارے خاموش ہیں محفل اداس ہے</div>
+            <div class="nav-links urdu-font font-bold text-gray-700">
+                <a href="#" class="text-red-700 border-b-2 border-red-700">صفحہ اول</a>
+                <a href="#poetry-list">اردو شاعری</a>
+                <a href="#about-section">تعارف</a>
             </div>
         </div>
     </nav>
 
-    <!-- Profile Intro -->
-    <section class="profile-section">
+    <!-- Profile Intro Section -->
+    <section id="about-section" class="profile-section">
         <div class="container mx-auto px-4">
-            <div class="flex flex-col md:flex-row gap-10 items-center text-center md:text-right">
-                <div class="relative">
-                    <img src="https://i.ibb.co/XZpNgSJ4/IMG-20251026-WA0025-modified.png" alt="حسن جتوئی" class="profile-img rounded-xl border-4 border-white shadow-2xl mx-auto">
-                    <div class="absolute -bottom-2 -right-2 bg-green-500 w-6 h-6 rounded-full border-4 border-white"></div>
-                </div>
+            <div class="flex flex-col md:flex-row gap-8 items-center text-center md:text-right">
+                <img src="https://i.ibb.co/XZpNgSJ4/IMG-20251026-WA0025-modified.png" alt="حسن جتوئی" class="profile-img rounded-xl shadow-lg border-2 border-red-100" style="width: 150px; height: 150px; object-fit: cover;">
                 <div class="flex-grow">
-                    <h1 class="text-4xl md:text-5xl font-bold text-gray-800 urdu-font mb-3">حسن جتوئی</h1>
-                    <h2 class="text-xl text-red-700 font-bold mb-5 urdu-font">شاعرِ مشرقِ سندھ</h2>
-                    <div class="bg-red-50 p-6 rounded-xl border-r-8 border-red-700 text-gray-700 urdu-font text-xl leading-relaxed mb-6">
-                        "حسن جتوئی کا تعارف حسن جتوئی ایک مشہور شاعر، نثر نویس اور رائٹر ہیں جن کا تعلق سندھ کے ضلع دادو، تحصیل میہڑ کی ایک چھوٹی سی بستی سے ہے۔ حسن جتوئی نے اپنی تخلیقی صلاحیتوں کو ادب کی دنیا میں اجاگر کیا ہے، اور ان کی تحریریں معاشرتی، ثقافتی اور ذاتی تجربات کی گہرائیوں کو بیان کرتی ہیں۔ ان کا کلام اور نثر نہ صرف سندھ کی روایات اور ثقافت کی عکاسی کرتا ہے بلکہ ان میں ایک منفرد فکری پہلو بھی نظر آتا ہے۔ حسن جتوئی کے قلم کا مقصد لوگوں کو بیدار کرنا، ان کے جذبات کو چھونا اور انہیں زندگی کے مختلف پہلوؤں سے روشناس کروانا ہے۔ ان کی شاعری میں انسانیت، محبت اور اجتماعی مسائل کی گونج ہے، جبکہ نثر میں حقیقت اور تخیل کا حسین امتزاج ملتا ہے۔ حسن جتوئی کا تخلیقی سفر ایک جذبے سے شروع ہوا، اور وہ اپنے کام کو مزید نکھارنے کی کوشش کر رہے ہیں تاکہ وہ اپنے پیغام کو وسیع تر سطح پر پہنچا سکیں۔ ان کا مقصد صرف ادب کے ذریعے انسانوں کے دلوں تک پہنچنا ہے بلکہ ان کی تحریروں میں ایک ایسی قوت ہے جو قارئین کو سوچنے پر مجبور کر دیتی ہے۔
-۔"
+                    <h1 class="text-3xl font-bold text-gray-800 urdu-font mb-1">حسن جتوئی</h1>
+                    <h2 class="text-lg text-red-700 font-bold mb-3 urdu-font">شاعرِ مشرقِ سندھ</h2>
+                    <div class="bg-gray-50 p-5 rounded-lg border-r-4 border-red-700 text-gray-700 urdu-font text-xl leading-relaxed mb-4 shadow-sm">
+                        حسن جتوئی ایک مشہور شاعر اور نثر نویس ہیں جن کا تعلق میہڑ، سندھ سے ہے۔ ان کی تحریروں میں معاشرتی مسائل اور محبت کا خوبصورت امتزاج ملتا ہے۔ وہ اپنی منفرد آواز اور گہرے جذبوں کی وجہ سے ادبی حلقوں میں خاص پہچان رکھتے ہیں۔ ان کا کلام انسانیت، درد اور امید کا آئینہ دار ہے۔
                     </div>
                     <div class="flex flex-wrap justify-center md:justify-start gap-4">
-                        <!-- Number Hidden, only link -->
-                        <a href="https://wa.me/923083500829" target="_blank" class="btn-red urdu-font text-lg shadow-lg"><i class="fab fa-whatsapp"></i> واٹس ایپ پر کلام منگوائیں</a>
-                        <a href="#poetry-list" class="bg-gray-100 text-gray-800 px-8 py-3 rounded-md font-bold hover:bg-gray-200 transition-all urdu-font">کلام دیکھیں</a>
+                        <a href="https://wa.me/923083500829" target="_blank" class="btn-red urdu-font shadow-md"><i class="fab fa-whatsapp text-lg"></i> واٹس ایپ رابطہ</a>
+                        <a href="mailto:jatoihassan009@gmail.com" class="bg-gray-800 text-white px-5 py-2.5 rounded-md urdu-font font-bold shadow-md hover:bg-black transition-colors">ای میل کریں</a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Main Content -->
-    <main class="container mx-auto px-4 py-16">
-        <div class="flex flex-col lg:flex-row gap-12">
+    <!-- Main Content Grid -->
+    <main class="container mx-auto px-4 py-8">
+        <div class="flex flex-col lg:flex-row gap-8">
             
-            <!-- Poetry Section -->
+            <!-- Poetry Column -->
             <div id="poetry-list" class="lg:w-2/3">
-                <div class="flex items-center gap-4 mb-10">
-                    <div class="h-1 flex-grow bg-gray-200"></div>
-                    <h3 class="text-3xl font-bold urdu-font text-gray-800">منتخب اردو کلام</h3>
-                    <div class="h-1 flex-grow bg-gray-200"></div>
-                </div>
-                
-                <div id="poetry-container" class="space-y-12">
-                    <!-- Poetry will be injected by JavaScript -->
+                <div id="poetry-container" class="space-y-6">
+                    <!-- Poetry Data Injected via JS -->
                 </div>
             </div>
 
-            <!-- Sidebar -->
-            <aside class="lg:w-1/3 space-y-8">
-                <!-- Contact Info - Number hidden from text -->
-                <div class="sidebar-box">
-                    <div class="sidebar-title urdu-font text-lg">رابطہ برائے مشاعرہ</div>
-                    <div class="p-8 text-center">
-                        <p class="urdu-font text-gray-600 mb-6 leading-relaxed">مشاعرے یا ادبی پروگرام کے لیے واٹس ایپ پر رابطہ کریں:</p>
-                        <a href="https://wa.me/923083500829" target="_blank" class="inline-block bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-full font-bold urdu-font transition-all shadow-md">
-                            <i class="fab fa-whatsapp ml-2"></i> واٹس ایپ میسج کریں
+            <!-- Sidebar Column -->
+            <aside class="lg:w-1/3">
+                <div class="sidebar-box shadow-sm border-r-4 border-red-700">
+                    <div class="sidebar-title urdu-font">میری ویب سائٹس اور ادبی لنکس</div>
+                    <div class="divide-y divide-gray-100 urdu-font">
+                        <a href="https://www.google.com/search?q=hassanalipoetry" target="_blank" class="block p-4 hover:bg-red-50 text-red-700 font-bold flex items-center justify-between">
+                            <span>گوگل سرچ: hassanalipoetry</span>
+                            <i class="fab fa-google text-xs"></i>
                         </a>
-                        <div class="mt-6 flex justify-center gap-2">
-                            <span class="bg-green-100 text-green-700 px-3 py-1 rounded-full text-xs font-bold font-sans">ACTIVE ONLINE</span>
-                        </div>
+                        <a href="https://share.google/tO6cO3yNLwVwv9TwI" target="_blank" class="block p-4 hover:bg-red-50 text-gray-700 flex items-center justify-between">
+                            <span>گوگل شیئر پورٹل</span>
+                            <i class="fas fa-share-alt text-xs text-gray-400"></i>
+                        </a>
+                        <a href="https://www.urdupoint.com/poetry/user-poet/hassan-jatoi-27314.html" target="_blank" class="block p-4 hover:bg-red-50 text-gray-700 flex items-center justify-between">
+                            <span>اردو پوائنٹ پروفائل</span>
+                            <i class="fas fa-pen-nib text-xs text-gray-400"></i>
+                        </a>
+                        <a href="https://hassanalipoetry.vercel.app/" target="_blank" class="block p-4 hover:bg-red-50 text-gray-700 flex items-center justify-between">
+                            <span>ورسل ویب پورٹل</span>
+                            <i class="fas fa-globe text-xs text-gray-400"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="sidebar-box shadow-sm">
+                    <div class="sidebar-title urdu-font">رابطہ کی تفصیلات</div>
+                    <div class="p-5 text-center bg-gray-50/50">
+                        <i class="fas fa-envelope-open-text text-red-700 text-2xl mb-3"></i>
+                        <p class="urdu-font text-sm text-gray-600 mb-2">ادبی تعاون کے لیے:</p>
+                        <a href="mailto:jatoihassan009@gmail.com" class="text-red-700 font-bold text-lg block break-all">jatoihassan009@gmail.com</a>
                     </div>
                 </div>
 
-                <!-- Links -->
-                <div class="sidebar-box">
-                    <div class="sidebar-title urdu-font text-lg">اہم لنکس</div>
-                    <div class="divide-y divide-gray-100 urdu-font">
-                        <a href="https://www.urdupoint.com/poetry/user-poet/hassan-jatoi-27314.html" target="_blank" class="block p-4 hover:bg-red-50 text-gray-700 hover:text-red-700 transition-colors">اردو پوائنٹ پروفائل</a>
-                        <a href="https://hassanalipoetry.vercel.app/" target="_blank" class="block p-4 hover:bg-red-50 text-gray-700 hover:text-red-700 transition-colors">ورسل پوئٹری پورٹل</a>
-                        <a href="https://allpoetry.com/Hassan_jatoi" target="_blank" class="block p-4 hover:bg-red-50 text-gray-700 hover:text-red-700 transition-colors">انٹرنیشنل پوئٹری لنک</a>
-                    </div>
+                <div class="p-4 border border-dashed border-gray-300 rounded-lg text-center">
+                    <p class="urdu-font text-gray-500 text-[10px]">تمام ویب پراپرٹیز حسن جتوئی کی ملکیت ہیں</p>
                 </div>
             </aside>
         </div>
     </main>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 text-gray-500 py-16 text-center border-t-4 border-red-700">
+    <footer class="bg-gray-900 text-gray-400 py-10 text-center">
         <div class="container mx-auto px-4">
-            <h2 class="urdu-font text-3xl text-white mb-4">حسن جتوئی آفیشل</h2>
-            <div class="flex justify-center gap-4 mb-8">
-                <a href="https://wa.me/923083500829" target="_blank" class="text-gray-400 hover:text-green-500 text-2xl transition-colors"><i class="fab fa-whatsapp"></i></a>
-                <a href="mailto:jatoihassan009@gmail.com" class="text-gray-400 hover:text-red-600 text-2xl transition-colors"><i class="far fa-envelope"></i></a>
+            <h2 class="urdu-font text-2xl text-white mb-2">حسن جتوئی آفیشل پورٹل</h2>
+            <p class="urdu-font text-sm mb-6">شاعرِ مشرقِ سندھ - میہڑ، سندھ</p>
+            <div class="flex justify-center gap-6 mb-8 text-xl">
+                <a href="https://wa.me/923083500829" class="hover:text-green-500"><i class="fab fa-whatsapp"></i></a>
+                <a href="https://share.google/tO6cO3yNLwVwv9TwI" class="hover:text-blue-400"><i class="fab fa-google"></i></a>
+                <a href="https://www.urdupoint.com/poetry/user-poet/hassan-jatoi-27314.html" class="hover:text-red-500"><i class="fas fa-pen-fancy"></i></a>
             </div>
-            <p class="urdu-font mb-8 text-lg max-w-xl mx-auto">تمام حقوق محفوظ ہیں۔ کلام شیئر کرنے کی صورت میں شاعر کا نام ضرور لکھیں۔</p>
-            <div class="text-[10px] font-sans tracking-[0.3em] uppercase text-gray-600">
-                &copy; 2026 OFFICIAL PORTAL | DESIGNED FOR EXCELLENCE
+            <div class="text-[10px] font-sans tracking-[0.2em] text-gray-600 uppercase border-t border-gray-800 pt-6">
+                &copy; 2026 HASSAN JATOI OFFICIAL | SEO OPTIMIZED | ALL RIGHTS RESERVED
             </div>
         </div>
     </footer>
 
-    <!-- Toast -->
-    <div id="toast" class="fixed bottom-10 left-1/2 -translate-x-1/2 bg-gray-800 text-white px-10 py-4 rounded-full shadow-2xl opacity-0 transition-all z-50 pointer-events-none urdu-font text-lg">کلام کاپی کر لیا گیا!</div>
+    <!-- Toast Notification -->
+    <div id="toast" class="fixed bottom-10 left-1/2 -translate-x-1/2 bg-gray-800 text-white px-8 py-3 rounded-full shadow-2xl opacity-0 transition-all z-50 pointer-events-none urdu-font text-md">کلام کاپی کر لیا گیا!</div>
 
     <script>
         const poetryData = [
             {
                 title: "کبھی فرصت ملے تو ملنا",
-                text: "کبھی فرصت ملے تو ملنا نچوڑ دونگا تجھے\nسنا ہے آپ ٹوٹے ہوے ہیں جوڑ دونگا تجھے\n\nاور عشق کے آداب سے واقف ہی نہیں دنیا\nپرواز میں ایلیاء ہے ، راز کھول دونگا تجھے\n\nاور میری دل گناھگار اب مطمئن ہے بھت\nاے مطلبی دنیا جلدی ہی چھوڑ دونگا تجھے\n\nمیں مے میں ہوں، اور نشہ مجھ ہی میں ہے\nشراب کی کیا اوقات ، بوتل توڑ دونگا تجھے\n\nزاہد کو غرور ہے بہت، اپنی عبادت پر حسن\nمیں گر چاہوں تو کہکشاں توڑ دونگا تجھے"
+                text: "کبھی فرصت ملے تو ملنا نچوڑ دونگا تجھے\nسنا ہے آپ ٹوٹے ہوے ہیں جوڑ دونگا تجھے\n\nاور عشق کے آداب سے واقف ہی نہیں دنیا\nپرواز میں ایلیاء ہے ، راز کھول دونگا تجھے\n\nاور میری دل گناھگار اب مطمئن ہے بھت\nاے مطلبی دنیا جلدی ہی چھوڑ دونگا تجھے\n\nمیں مے میں ہوں، اور نشہ مجھ ہی میں ہے\nشراب کی کیا اوقات ، بوتل توڑ دونگا تجھے\n\nزاہد کو غرور hai بہت، اپنی عبادت پر حسن\nمیں گر چاہوں تو کہکشاں توڑ دونگا تجھے"
             },
             {
                 title: "تازہ کلام (سندھ کی خوشبو)",
@@ -248,16 +298,20 @@
             const container = document.getElementById('poetry-container');
             if(!container) return;
             poetryData.forEach((p) => {
+                const encodedText = encodeURIComponent(p.text + "\n\n— شاعر: حسن جتوئی\n" + window.location.href);
                 container.innerHTML += `
-                    <div class="poem-card overflow-hidden">
-                        <div class="poem-header urdu-font">
-                            ${p.title}
-                        </div>
-                        <div class="p-6 md:p-16 text-center">
+                    <div class="poem-card shadow-sm hover:shadow-md transition-shadow">
+                        <div class="poem-header urdu-font">${p.title}</div>
+                        <div class="p-6 text-center">
                             <div class="nastaleeq urdu-font">${p.text}</div>
-                            <div class="flex justify-center items-center gap-4 mt-12 pt-10 border-t border-gray-100">
-                                <button onclick="share('wa', \`${p.text}\`)" class="share-icon wa" title="Share on WhatsApp"><i class="fab fa-whatsapp"></i></button>
-                                <button onclick="share('fb', \`${p.text}\`)" class="share-icon fb" title="Share on Facebook"><i class="fab fa-facebook-f"></i></button>
+                            
+                            <!-- Detailed Social Share Bar -->
+                            <div class="share-bar">
+                                <a href="https://api.whatsapp.com/send?text=${encodedText}" target="_blank" class="share-icon wa" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                                <a href="https://www.facebook.com/sharer/sharer.php?u=${window.location.href}&quote=${encodedText}" target="_blank" class="share-icon fb" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                                <a href="https://twitter.com/intent/tweet?text=${encodedText}" target="_blank" class="share-icon tw" title="X (Twitter)"><i class="fab fa-x-twitter"></i></a>
+                                <a href="https://t.me/share/url?url=${window.location.href}&text=${encodedText}" target="_blank" class="share-icon tg" title="Telegram"><i class="fab fa-telegram-plane"></i></a>
+                                <a href="https://www.linkedin.com/sharing/share-offsite/?url=${window.location.href}" target="_blank" class="share-icon li" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
                                 <button onclick="copyPoem(\`${p.text}\`)" class="share-icon cp" title="Copy Text"><i class="fas fa-copy"></i></button>
                             </div>
                         </div>
@@ -267,7 +321,7 @@
         }
 
         function copyPoem(text) {
-            const fullText = text + "\n\n— شاعر: حسن جتوئی\n" + window.location.href;
+            const fullText = text + "\n\n— شاعر: حسن جتوئی\nآفیشل پورٹل: " + window.location.href;
             const el = document.createElement('textarea');
             el.value = fullText;
             document.body.appendChild(el);
@@ -277,31 +331,22 @@
             
             const toast = document.getElementById('toast');
             toast.style.opacity = '1';
-            toast.style.bottom = '40px';
-            setTimeout(() => {
-                toast.style.opacity = '0';
-                toast.style.bottom = '10px';
-            }, 2000);
-        }
-
-        function share(platform, text) {
-            const fullText = encodeURIComponent(text + "\n\n— شاعر: حسن جتوئی\n" + window.location.href);
-            let url = "";
-            if(platform === 'wa') url = `https://api.whatsapp.com/send?phone=923083500829&text=${fullText}`;
-            if(platform === 'fb') url = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(window.location.href)}`;
-            window.open(url, '_blank');
+            toast.style.bottom = '12%';
+            setTimeout(() => { 
+                toast.style.opacity = '0'; 
+                toast.style.bottom = '10%';
+            }, 2500);
         }
 
         function updateDate() {
-            const now = new Date();
             const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
             const dateEl = document.getElementById('urdu-date');
-            if(dateEl) dateEl.innerText = now.toLocaleDateString('ur-PK', options);
+            if(dateEl) dateEl.innerText = new Date().toLocaleDateString('ur-PK', options);
         }
 
-        window.onload = () => {
-            renderPoetry();
-            updateDate();
+        window.onload = () => { 
+            renderPoetry(); 
+            updateDate(); 
         };
     </script>
 </body>
